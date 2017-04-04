@@ -103,21 +103,14 @@ paths:
             type: "array"
             items: 
               $ref: "#/definitions/Country"
-          examples:
-            application/json: |-
-              [
-                {
-                  "id": 4
-                  "name": "England"
-                }
-              ]
-            application/xml: |-
-              [
-                {
-                  "id": 4
-                  "name": "England"
-                }
-              ]
+#          examples:
+#            application/json: |-
+#              [
+#                {
+#                  "id": 4
+#                  "name": "England"
+#                }
+#              ]
       security:
         - apikey: []
       x-unitTests: []
@@ -1204,3 +1197,7 @@ definitions:
         type: "integer"
       name: 
         type: "string"
+    example:
+      id: 4
+      name: England
+
