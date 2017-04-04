@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: '1.0'
-  title: Press Association Sport API
-  description: Welcome to the IO Docs page for the Press Association Sport API.
+  title: Sport API
+  description: Welcome to the Press Association Sport API Developer Documentation.
   license:
     name: MIT
     url: 'http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT'
