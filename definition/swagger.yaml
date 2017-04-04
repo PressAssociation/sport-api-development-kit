@@ -111,6 +111,13 @@ paths:
                   "name": "England"
                 }
               ]
+            application/xml: |-
+              [
+                {
+                  "id": 4
+                  "name": "England"
+                }
+              ]
       security:
         - apikey: []
       x-unitTests: []
