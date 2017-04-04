@@ -103,14 +103,14 @@ paths:
             type: "array"
             items: 
               $ref: "#/definitions/Country"
-#          examples:
-#            application/json: |-
-#              [
-#                {
-#                  "id": 4
-#                  "name": "England"
-#                }
-#              ]
+          examples:
+            application/json: |-
+              [
+                {
+                  "id": 4
+                  "name": "England"
+                }
+              ]
       security:
         - apikey: []
       x-unitTests: []
@@ -1184,8 +1184,8 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-        
-        
+
+
 definitions: 
   Country: 
     type: "object"
@@ -1197,7 +1197,3 @@ definitions:
         type: "integer"
       name: 
         type: "string"
-    example:
-      id: 4
-      name: England
-
