@@ -72,7 +72,6 @@ paths:
           in: query
           required: false
           default: 100
-          maximum: 100
           type: integer
           format: int32
           description: >-
