@@ -59,6 +59,7 @@ paths:
       operationId: Country Collection
       produces:
         - application/json
+        - application/xml
       parameters:
         - name: Accept
           in: header
@@ -132,12 +133,14 @@ paths:
           required: true
           type: string
           description: 'The response format. (Acceptable values are: "application/json")'
+          x-example: application/json
         - name: countryId
           in: path
           required: true
           type: integer
           format: int32
           description: The identifier for the country requested.
+          x-example: 4
       responses:
         '200':
           description: ''
