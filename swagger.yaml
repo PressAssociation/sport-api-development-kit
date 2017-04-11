@@ -107,8 +107,9 @@ paths:
             application/json: |-
               [
                 {
-                  "id": 4
-                  "name": "England"
+                  "id": 4,
+                  "name": "England",
+                  "lastUpdated": "2017-01-01T00:00:00.000Z"
                 }
               ]
       security:
