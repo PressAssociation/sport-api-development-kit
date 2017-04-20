@@ -3,9 +3,6 @@ info:
   version: '1.0'
   title: Sport API
   description: Welcome to the Press Association Sport API Developer Documentation.
-  license:
-    name: MIT
-    url: 'http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT'
 host: sport.api.press.net
 basePath: /v1
 securityDefinitions:
@@ -13,8 +10,8 @@ securityDefinitions:
     type: apiKey
     name: apikey
     in: header
-    x-testValue: ''
 schemes:
+  - https
   - http
 produces:
   - application/json
@@ -25,35 +22,20 @@ paths:
       description: >-
         Return a collection of available resources. This endpoint is for navigation of the API only.
         Some of the endpoints are not navigable without suppling the required parameters in with the request.
-      tags:
-        - Root
-      operationId: Get Resources
+      operationId: getResources
       produces:
         - application/json
-      parameters:
-        - $ref: '#/parameters/Accept'
       responses:
         '200':
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /country:
     get:
       description: Return a collection of countries.
       tags:
         - Country
-      operationId: Country Collection
-      produces:
-        - application/json
-        - application/xml
+      operationId: listCountries
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/limit'
@@ -75,22 +57,12 @@ paths:
                   "lastUpdated": "2017-01-01T00:00:00.000Z"
                 }
               ]
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/country/{countryId}':
     get:
       description: Return the country's details.
       tags:
         - Country
-      operationId: Country Detail
-      produces:
-        - application/json
+      operationId: getCountry
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -101,22 +73,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /draw:
     get:
       description: Return a collection of draws.
       tags:
         - Draw
-      operationId: Draw Collection
-      produces:
-        - application/json
+      operationId: listDraws
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -131,22 +93,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/draw/{drawId}':
     get:
       description: Return the draw's details.
       tags:
         - Draw
-      operationId: Draw Detail
-      produces:
-        - application/json
+      operationId: getDraw
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -157,14 +109,6 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /event:
     get:
       description: >-
@@ -172,9 +116,7 @@ paths:
         the combination of country and sport is used.
       tags:
         - Event
-      operationId: Event Collection
-      produces:
-        - application/json
+      operationId: listEvents
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -204,22 +146,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/event/{eventId}':
     get:
       description: Return the event's details.
       tags:
         - Event
-      operationId: Event Detail
-      produces:
-        - application/json
+      operationId: getEvent
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -230,22 +162,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/event/{eventId}/actions':
     get:
       description: Return the event's actions.
       tags:
         - Event
-      operationId: Event Actions
-      produces:
-        - application/json
+      operationId: getEventActions
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -256,22 +178,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/event/{eventId}/composition':
     get:
       description: Return the event composition.
       tags:
         - Event
-      operationId: Event Composition
-      produces:
-        - application/json
+      operationId: getEventComposition
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -282,22 +194,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/participant/{participantId}':
     get:
       description: Return the participant's details.
       tags:
         - Participant
-      operationId: Participant Detail
-      produces:
-        - application/json
+      operationId: getParticipant
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -308,22 +210,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /season:
     get:
       description: Return a collection of seasons.
       tags:
         - Season
-      operationId: Season Collection
-      produces:
-        - application/json
+      operationId: listSeasons
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -337,22 +229,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/season/{seasonId}':
     get:
       description: Return the season's details.
       tags:
         - Season
-      operationId: Season Detail
-      produces:
-        - application/json
+      operationId: getSeason
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -363,22 +245,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /sport:
     get:
       description: Return a collection of sports.
       tags:
         - Sport
-      operationId: Sport Collection
-      produces:
-        - application/json
+      operationId: listSports
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/limit'
@@ -389,22 +261,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/sport/{sportId}':
     get:
       description: Return the standing's details.
       tags:
         - Sport
-      operationId: Sport Detail
-      produces:
-        - application/json
+      operationId: getSport
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -415,14 +277,6 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /standing:
     get:
       description: |
@@ -432,9 +286,7 @@ paths:
         tournament, season, stage, participant, event should be supplied
       tags:
         - Standing
-      operationId: Standing Collection
-      produces:
-        - application/json
+      operationId: listStandings
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseDate'
@@ -467,22 +319,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/standing/{standingId}':
     get:
       description: Return the standing's details.
       tags:
         - Standing
-      operationId: Standing Detail
-      produces:
-        - application/json
+      operationId: getStanding
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -493,14 +335,6 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /stage:
     get:
       description: |
@@ -510,9 +344,7 @@ paths:
         or season must be supplied
       tags:
         - Stage
-      operationId: Stage Collection
-      produces:
-        - application/json
+      operationId: getStages
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseDate'
@@ -533,22 +365,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/stage/{stageId}':
     get:
       description: Return the stage's details.
       tags:
         - Stage
-      operationId: Stage Detail
-      produces:
-        - application/json
+      operationId: getStage
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -559,22 +381,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   /tournament:
     get:
       description: Return a collection of tournaments.
       tags:
         - Tournament
-      operationId: Tournament Collection
-      produces:
-        - application/json
+      operationId: listTournament
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -588,22 +400,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/tournament/{tournamentId}':
     get:
       description: Return the tournament's details.
       tags:
         - Tournament
-      operationId: Tournament Detail
-      produces:
-        - application/json
+      operationId: getTournament
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -614,22 +416,12 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
   '/venue/{venueId}':
     get:
       description: Return the venue's details.
       tags:
         - Venue
-      operationId: Venue Detail
-      produces:
-        - application/json
+      operationId: getVenue
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -640,15 +432,6 @@ paths:
           description: ''
           schema:
             type: object
-      security:
-        - apikey: []
-      x-unitTests: []
-      x-operation-settings:
-        CollectParameters: false
-        AllowDynamicQueryParameters: false
-        AllowDynamicFormParameters: false
-        IsMultiContentStreaming: false
-
 
 definitions:
   Country:
