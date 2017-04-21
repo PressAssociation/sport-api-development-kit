@@ -2093,6 +2093,66 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 2,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 24,
+                    "name": "Am. Football",
+                    "updated": "2013-11-29T09:30:34Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/sport/24"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 26,
+                    "name": "Baseball",
+                    "updated": "2013-05-17T06:07:20Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/sport/26"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/sport?limit=2" document-class="pa:sport-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="2"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:sport id="sport.24">
+                      <pa:sport-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:24" code-name="Am. Football" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2013-11-29T09:30:34Z"/>
+                          <name>Am. Football</name>
+                      </pa:sport-metadata>
+                  </pa:sport>
+                  <pa:sport id="sport.26">
+                      <pa:sport-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:26" code-name="Baseball" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2013-05-17T06:07:20Z"/>
+                          <name>Baseball</name>
+                      </pa:sport-metadata>
+                  </pa:sport>
+              </pa:sports-content>
   '/sport/{sportId}':
     get:
       description: Return the standing's details.
@@ -2109,6 +2169,33 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 5,
+                "name": "Ice Hockey",
+                "updated": "2013-05-17T06:14:07Z",
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/sport/5"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/sport/5" document-class="pa:sport-detail"></pa:sports-metadata>
+                  <pa:sport id="sport.5">
+                      <pa:sport-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:5" code-name="Ice Hockey" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2013-05-17T06:14:07Z"/>
+                          <name>Ice Hockey</name>
+                      </pa:sport-metadata>
+                  </pa:sport>
+              </pa:sports-content>
   /standing:
     get:
       description: |
