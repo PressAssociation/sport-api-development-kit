@@ -60,8 +60,6 @@ paths:
           description: "Country Collection Response"
           schema:
             type: "array"
-            items:
-              $ref: "#/definitions/Country"
           examples:
             application/json: |-
               {
@@ -3092,18 +3090,6 @@ paths:
                       </site-metadata>
                   </pa:site>
               </pa:sports-content>
-
-definitions:
-  Country:
-    type: "object"
-    required:
-      - "id"
-      - "name"
-    properties:
-      id:
-        type: "integer"
-      name:
-        type: "string"
 
 parameters:
   Accept:
