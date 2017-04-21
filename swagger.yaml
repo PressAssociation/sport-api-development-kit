@@ -2808,6 +2808,73 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 46,
+                "name": "Iberostar Estadio",
+                "type": "Stadium",
+                "country": {
+                  "id": 8,
+                  "name": "Spain"
+                },
+                "sports": [
+                  {
+                    "id": 1,
+                    "name": "Soccer"
+                  }
+                ],
+                "meta": {
+                  "capacity": {
+                    "code": "venue:capacity",
+                    "name": "Capacity",
+                    "value": "23142"
+                  },
+                  "city": {
+                    "code": "venue:city",
+                    "name": "City",
+                    "value": "Palma"
+                  },
+                  "latitude": {
+                    "code": "venue:latitude",
+                    "name": "Latitude",
+                    "value": "39.59"
+                  },
+                  "longitude": {
+                    "code": "venue:longitude",
+                    "name": "Longitude",
+                    "value": "2.63"
+                  }
+                },
+                "updated": "2010-09-15T13:53:53Z",
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/venue/46"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/venue/46" document-class="pa:venue-detail">
+                      <sports-title>Iberostar Estadio</sports-title>
+                  </pa:sports-metadata>
+                  <pa:site id="venue.46">
+                      <site-metadata>
+                          <name>Iberostar Estadio</name>
+                          <sports-property formal-name="venue:capacity" value="23142"/>
+                          <sports-property formal-name="venue:city" value="Palma"/>
+                          <sports-property formal-name="venue:latitude" value="39.59"/>
+                          <sports-property formal-name="venue:longitude" value="2.63"/>
+                          <sports-property formal-name="common:updated" value="2010-09-15T13:53:53Z"/>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:country" code-key="country:8" code-name="Spain"/>
+                              <sports-content-code code-type="pa:sport" code-key="sport:1" code-name="Soccer"/>
+                          </sports-content-codes>
+                      </site-metadata>
+                  </pa:site>
+              </pa:sports-content>
 
 definitions:
   Country:
