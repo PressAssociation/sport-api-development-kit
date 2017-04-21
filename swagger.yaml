@@ -2666,6 +2666,80 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 1,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 46,
+                    "name": "Denmark Superleague",
+                    "gender": "male",
+                    "sport": {
+                      "id": 1,
+                      "name": "Soccer"
+                    },
+                    "updated": "2013-07-08T13:03:52Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/tournament/46"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 135,
+                    "name": "Greece Super League",
+                    "gender": "male",
+                    "sport": {
+                      "id": 1,
+                      "name": "Soccer"
+                    },
+                    "updated": "2013-07-08T13:04:03Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/tournament/135"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/tournament?sport=1&amp;limit=1" document-class="pa:tournament-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="1"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:tournament id="tournament.46">
+                      <tournament-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:1" code-name="Soccer"/>
+                              <sports-content-code code-type="pa:tournament" code-key="tournament:46" code-name="Denmark Superleague" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                              <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2013-07-08T13:03:52Z"/>
+                          <name>Denmark Superleague</name>
+                      </tournament-metadata>
+                  </pa:tournament>
+                  <pa:tournament id="tournament.135">
+                      <tournament-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:1" code-name="Soccer"/>
+                              <sports-content-code code-type="pa:tournament" code-key="tournament:135" code-name="Greece Super League" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                              <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2013-07-08T13:04:03Z"/>
+                          <name>Greece Super League</name>
+                      </tournament-metadata>
+                  </pa:tournament>
+              </pa:sports-content>
   '/tournament/{tournamentId}':
     get:
       description: Return the tournament's details.
@@ -2682,6 +2756,42 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 46,
+                "name": "Denmark Superleague",
+                "gender": "male",
+                "sport": {
+                  "id": 1,
+                  "name": "Soccer"
+                },
+                "updated": "2013-07-08T13:03:52Z",
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/tournament/46"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/tournament/46" document-class="pa:tournament-detail">
+                      <sports-title>Denmark Superleague</sports-title>
+                  </pa:sports-metadata>
+                  <pa:tournament id="tournament.46">
+                      <tournament-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:1" code-name="Soccer"/>
+                              <sports-content-code code-type="pa:tournament" code-key="tournament:46" code-name="Denmark Superleague" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                              <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2013-07-08T13:03:52Z"/>
+                          <name>Denmark Superleague</name>
+                      </tournament-metadata>
+                  </pa:tournament>
+              </pa:sports-content>
   '/venue/{venueId}':
     get:
       description: Return the venue's details.
