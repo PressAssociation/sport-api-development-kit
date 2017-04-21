@@ -2238,6 +2238,66 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 2,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 129936,
+                    "name": "WTA Singles Rankings",
+                    "type": "Simple points based ranking list",
+                    "updated": "2015-12-14T05:37:56Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/standing/129936"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 129937,
+                    "name": "WTA Doubles Rankings",
+                    "type": "Simple points based ranking list",
+                    "updated": "2015-12-14T05:38:17Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/standing/129937"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/standing?sport=2&amp;limit=2" document-class="pa:standing-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="2"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:standing id="standing.129936">
+                      <standing-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:standing" code-key="standing:129936" code-name="WTA Singles Rankings"></sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2015-12-14T05:37:56Z"/>
+                      </standing-metadata>
+                  </pa:standing>
+                  <pa:standing id="standing.129937">
+                      <standing-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:standing" code-key="standing:129937" code-name="WTA Doubles Rankings"></sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2015-12-14T05:38:17Z"/>
+                      </standing-metadata>
+                  </pa:standing>
+              </pa:sports-content>
   '/standing/{standingId}':
     get:
       description: Return the standing's details.
@@ -2254,6 +2314,106 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 129936,
+                "name": "WTA Singles Rankings",
+                "type": "Simple points based ranking list",
+                "sport": {
+                  "id": 2,
+                  "name": "Tennis"
+                },
+                "updated": "2015-12-14T05:37:56Z",
+                "entries": [
+                  {
+                    "id": 1296871,
+                    "rank": 1,
+                    "participant": {
+                      "id": 49060,
+                      "name": "Angelique Kerber",
+                      "firstName": "Angelique",
+                      "lastName": "Kerber",
+                      "gender": "female",
+                      "type": "athlete",
+                      "country": {
+                        "id": 3,
+                        "name": "Germany"
+                      }
+                    },
+                    "standings": {
+                      "points": {
+                        "code": "result:points",
+                        "name": "Points",
+                        "value": "7335"
+                      }
+                    }
+                  },
+                  {
+                    "id": 1296869,
+                    "rank": 2,
+                    "participant": {
+                      "id": 47805,
+                      "name": "Serena Williams",
+                      "firstName": "Serena",
+                      "lastName": "Williams",
+                      "gender": "female",
+                      "type": "athlete",
+                      "country": {
+                        "id": 16,
+                        "name": "USA"
+                      }
+                    },
+                    "standings": {
+                      "points": {
+                        "code": "result:points",
+                        "name": "Points",
+                        "value": "7010"
+                      }
+                    }
+                  }
+                ],
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/standing/129936"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/standing/129936" document-class="pa:standing-detail">
+                      <sports-title>Simple points based ranking list</sports-title>
+                  </pa:sports-metadata>
+                  <pa:standing id="standing.129936">
+                      <standing-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"></sports-content-code>
+                              <sports-content-code code-type="pa:standing" code-key="standing:129936" code-name="WTA Singles Rankings"></sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="common:updated" value="2015-12-14T05:37:56Z"/>
+                      </standing-metadata>
+                      <player id="player.49060">
+                          <player-metadata key="player:49060">
+                              <name>Angelique Kerber</name>
+                          </player-metadata>
+                          <player-stats>
+                              <sports-property formal-name="result:points" value="7335"></sports-property>
+                              <rank value="1"></rank>
+                          </player-stats>
+                      </player>
+                      <player id="player.47805">
+                          <player-metadata key="player:47805">
+                              <name>Serena Williams</name>
+                          </player-metadata>
+                          <player-stats>
+                              <sports-property formal-name="result:points" value="7010"></sports-property>
+                              <rank value="2"></rank>
+                          </player-stats>
+                      </player>
+                  </pa:standing>
+              </pa:sports-content>
   /stage:
     get:
       description: |
