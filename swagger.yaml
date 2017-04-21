@@ -2494,16 +2494,16 @@ parameters:
       The 'end' parameter is typically used in combination with the 'start' param to form a date range.
 
       Formats Supported:
-       'YYYY-MM-DD'
-       'YYYY-MM-DD[T]HH:mm:ssZ'
-       'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
-       'YYYY-MM-DD[T]HH:mm:ss'
-       'YYYY-MM-DD[T]HH:mm'
-       'now'
-       'today'
-       'tomorrow'
-       'now.plus.n'
-       'now.minus.n'
+        - 'YYYY-MM-DD'
+        - 'YYYY-MM-DD[T]HH:mm:ssZ'
+        - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+        - 'YYYY-MM-DD[T]HH:mm:ss'
+        - 'YYYY-MM-DD[T]HH:mm'
+        - 'now'
+        - 'today'
+        - 'tomorrow'
+        - 'now.plus.n'
+        - 'now.minus.n'
   baseEntityId:
     name: baseEntityId
     in: path
