@@ -1827,6 +1827,120 @@ paths:
                       </player>
                   </pa:sports-event>
               </pa:sports-content>
+  /participant:
+    get:
+      description: Return a collection of participants.
+      tags:
+        - Participant
+      operationId: listParticipants
+      parameters:
+        - $ref: '#/parameters/Accept'
+        - $ref: '#/parameters/baseParentId'
+          name: sport
+        - $ref: '#/parameters/baseParentId'
+          name: country
+        - $ref: '#/parameters/limit'
+          maximum: 100
+        - $ref: '#/parameters/offset'
+      responses:
+        "200":
+          description: "Participant Collection Response"
+          schema:
+            type: "object"
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 2,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 167964,
+                    "name": "07 Vestur",
+                    "gender": "male",
+                    "type": "team",
+                    "country": {
+                      "id": 67,
+                      "name": "Faroe Islands"
+                    },
+                    "sports": [
+                      {
+                        "id": 1,
+                        "name": "Soccer"
+                      }
+                    ],
+                    "meta": {
+                      "is-national-team": {
+                        "code": "participant:is-national-team",
+                        "name": "Is National Team",
+                        "value": "no"
+                      },
+                      "to-be-decided": {
+                        "code": "participant:to-be-decided",
+                        "name": "To Be Decided",
+                        "value": "no"
+                      }
+                    },
+                    "updated": "2015-03-05T13:51:15Z"
+                  },
+                  {
+                    "id": 658402,
+                    "name": "1. CfR Pforzheim",
+                    "gender": "male",
+                    "type": "team",
+                    "country": {
+                      "id": 3,
+                      "name": "Germany"
+                    },
+                    "sports": [
+                      {
+                        "id": 1,
+                        "name": "Soccer"
+                      }
+                    ],
+                    "meta": {
+                      "is-national-team": {
+                        "code": "participant:is-national-team",
+                        "name": "Is National Team",
+                        "value": "no"
+                      },
+                      "to-be-decided": {
+                        "code": "participant:to-be-decided",
+                        "name": "To Be Decided",
+                        "value": "no"
+                      }
+                    },
+                    "updated": "2015-12-08T08:59:33Z"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/participant?sport=1" document-class="pa:participant-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="20"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:team id="team.167964">
+                      <team-metadata key="team:167964" nationality="Faroe Islands">
+                          <name>07 Vestur</name>
+                          <sports-property formal-name="common:updated" value="2015-03-05T13:51:15Z"/>
+                          <sports-property formal-name="participant:is-national-team" value="no"/>
+                          <sports-property formal-name="participant:to-be-decided" value="no"/>
+                      </team-metadata>
+                  </pa:team>
+                  <pa:team id="team.658402">
+                      <team-metadata key="team:658402" nationality="Germany">
+                          <name>1. CfR Pforzheim</name>
+                          <sports-property formal-name="common:updated" value="2015-12-08T08:59:33Z"/>
+                          <sports-property formal-name="participant:is-national-team" value="no"/>
+                          <sports-property formal-name="participant:to-be-decided" value="no"/>
+                      </team-metadata>
+                  </pa:team>
+              </pa:sports-content>
   '/participant/{participantId}':
     get:
       description: Return the participant's details.
@@ -2791,6 +2905,109 @@ paths:
                           <name>Denmark Superleague</name>
                       </tournament-metadata>
                   </pa:tournament>
+              </pa:sports-content>
+  /venue:
+    get:
+      description: Return a collection of venues.
+      tags:
+        - Venue
+      operationId: listVenues
+      parameters:
+        - $ref: '#/parameters/Accept'
+        - $ref: '#/parameters/baseParentId'
+          name: sport
+        - $ref: '#/parameters/baseParentId'
+          name: country
+        - $ref: '#/parameters/limit'
+          maximum: 100
+        - $ref: '#/parameters/offset'
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 20,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 4560,
+                    "type": "Stadium",
+                    "country": {
+                      "id": 82,
+                      "name": "Paraguay"
+                    },
+                    "sports": [
+                      {
+                        "id": 1,
+                        "name": "Soccer"
+                      }
+                    ],
+                    "updated": "2013-01-31T17:37:28Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/venue/4560"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2515,
+                    "name": "10 de Diciembre",
+                    "type": "Stadium",
+                    "country": {
+                      "id": 114,
+                      "name": "Mexico"
+                    },
+                    "sports": [
+                      {
+                        "id": 1,
+                        "name": "Soccer"
+                      }
+                    ],
+                    "updated": "2010-09-15T13:53:59Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/venue/2515"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/venue?sport=1" document-class="pa:venue-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="20"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:site id="venue.4560">
+                      <site-metadata>
+                          <name></name>
+                          <sports-property formal-name="common:updated" value="2013-01-31T17:37:28Z"/>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:country" code-key="country:82" code-name="Paraguay"/>
+                              <sports-content-code code-type="pa:sport" code-key="sport:1" code-name="Soccer"/>
+                          </sports-content-codes>
+                      </site-metadata>
+                  </pa:site>
+                  <pa:site id="venue.2515">
+                      <site-metadata>
+                          <name>10 de Diciembre</name>
+                          <sports-property formal-name="common:updated" value="2010-09-15T13:53:59Z"/>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:country" code-key="country:114" code-name="Mexico"/>
+                              <sports-content-code code-type="pa:sport" code-key="sport:1" code-name="Soccer"/>
+                          </sports-content-codes>
+                      </site-metadata>
+                  </pa:site>
               </pa:sports-content>
   '/venue/{venueId}':
     get:
