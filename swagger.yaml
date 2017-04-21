@@ -1932,6 +1932,92 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 2,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 11091,
+                    "name": "2017",
+                    "tournament": {
+                      "id": 157,
+                      "name": "Challenger",
+                      "gender": "male"
+                    },
+                    "sport": {
+                      "id": 2,
+                      "name": "Tennis"
+                    },
+                    "updated": "2016-12-14T02:42:45Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/season/11091"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 9920,
+                    "name": "2016",
+                    "tournament": {
+                      "id": 157,
+                      "name": "Challenger",
+                      "gender": "male"
+                    },
+                    "sport": {
+                      "id": 2,
+                      "name": "Tennis"
+                    },
+                    "updated": "2015-10-12T22:02:03Z",
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/season/9920"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/season?tournament=157&amp;limit=2" document-class="pa:season-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="2"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:tournament id="tournament.157">
+                      <tournament-division id="season.11091">
+                          <tournament-division-metadata>
+                              <sports-content-codes>
+                                  <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                                  <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                                  <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
+                                  <sports-content-code code-type="pa:season" code-key="season:11091" code-name="2017" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                              </sports-content-codes>
+                              <sports-property formal-name="common:updated" value="2016-12-14T02:42:45Z"/>
+                              <name>2017</name>
+                          </tournament-division-metadata>
+                      </tournament-division>
+                      <tournament-division id="season.9920">
+                          <tournament-division-metadata>
+                              <sports-content-codes>
+                                  <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                                  <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                                  <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
+                                  <sports-content-code code-type="pa:season" code-key="season:9920" code-name="2016" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                              </sports-content-codes>
+                              <sports-property formal-name="common:updated" value="2015-10-12T22:02:03Z"/>
+                              <name>2016</name>
+                          </tournament-division-metadata>
+                      </tournament-division>
+                  </pa:tournament>
+              </pa:sports-content>
   '/season/{seasonId}':
     get:
       description: Return the season's details.
@@ -1948,6 +2034,49 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 9920,
+                "name": "2016",
+                "tournament": {
+                  "id": 157,
+                  "name": "Challenger",
+                  "gender": "male"
+                },
+                "sport": {
+                  "id": 2,
+                  "name": "Tennis"
+                },
+                "updated": "2015-10-12T22:02:03Z",
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/season/9920"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/season/9920" document-class="pa:season-detail">
+                      <sports-title>2016</sports-title>
+                  </pa:sports-metadata>
+                  <pa:tournament id="tournament.157">
+                      <tournament-division id="season.9920">
+                          <tournament-division-metadata>
+                              <sports-content-codes>
+                                  <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                                  <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                                  <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
+                                  <sports-content-code code-type="pa:season" code-key="season:9920" code-name="2016" xsi:type="pa:sportsContentCodeComplexType"></sports-content-code>
+                              </sports-content-codes>
+                              <sports-property formal-name="common:updated" value="2015-10-12T22:02:03Z"/>
+                              <name>2016</name>
+                          </tournament-division-metadata>
+                      </tournament-division>
+                  </pa:tournament>
+              </pa:sports-content>
   /sport:
     get:
       description: Return a collection of sports.
