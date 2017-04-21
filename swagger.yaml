@@ -64,13 +64,51 @@ paths:
               $ref: "#/definitions/Country"
           examples:
             application/json: |-
-              [
-                {
-                  "id": 4,
-                  "name": "England",
-                  "lastUpdated": "2017-01-01T00:00:00.000Z"
-                }
-              ]
+              {
+                "offset": 0,
+                "limit": 20,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 4,
+                    "name": "England",
+                    "updated": "2017-01-01T00:00:00Z"
+                    "meta": {
+                      "iso-code": {
+                        "code": "country:iso-code",
+                        "name": "Iso Code",
+                        "value": "GBR"
+                      }
+                    },
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/country/2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/country" document-class="pa:country-collection">
+                  <sports-property formal-name="hasNext" value="true"/>
+                  <sports-property formal-name="hasPrevious" value="false"/>
+                  <sports-property formal-name="limit" value="20"/>
+                  <sports-property formal-name="offset" value="0"/>
+                </pa:sports-metadata>
+                <pa:country id="country.174">
+                  <pa:country-metadata>
+                    <sports-content-codes>
+                      <sports-content-code code-type="pa:country" code-key="country:174" code-name="Afghanistan"/>
+                    </sports-content-codes>
+                    <sports-property formal-name="country:iso-code" value="AFG"/>
+                    <sports-property formal-name="common:updated" value="2014-04-30T10:27:29Z"/>
+                    <name>Afghanistan</name>
+                  </pa:country-metadata>
+                </pa:country>
+              </pa:sports-content>
   '/country/{countryId}':
     get:
       description: Return the country's details.
@@ -87,6 +125,41 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 2,
+                "name": "England",
+                "updated": "2015-10-20T14:15:46Z",
+                "meta": {
+                  "iso-code": {
+                    "code": "country:iso-code",
+                    "name": "Iso Code",
+                    "value": "GBR"
+                  }
+                },
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/country/2"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/country/2" document-class="pa:country-detail"></pa:sports-metadata>
+                  <pa:country id="country.2">
+                      <pa:country-metadata>
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:country" code-key="country:2" code-name="England"/>
+                          </sports-content-codes>
+                          <sports-property formal-name="country:iso-code" value="GBR"/>
+                          <sports-property formal-name="common:updated" value="2015-10-20T14:15:46Z"/>
+                          <name>England</name>
+                      </pa:country-metadata>
+                  </pa:country>
+              </pa:sports-content>
   /draw:
     get:
       description: Return a collection of draws.
