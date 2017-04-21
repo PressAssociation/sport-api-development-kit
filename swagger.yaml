@@ -36,11 +36,11 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1"
+                    "href": "http://sport.api.press.net/v1"
                   },
                   {
                     "rel": "sport-collection",
-                    "href": "http://sport-uat.api.press.net/v1/sport"
+                    "href": "http://sport.api.press.net/v1/sport"
                   }
                 ]
               }
@@ -84,7 +84,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/country/2"
+                        "href": "http://sport.api.press.net/v1/country/2"
                       }
                     ]
                   }
@@ -92,7 +92,7 @@ paths:
               }
             application/xml: |-
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/country" document-class="pa:country-collection">
+                <pa:sports-metadata doc-id="http://sport.api.press.net/v1/country" document-class="pa:country-collection">
                   <sports-property formal-name="hasNext" value="true"/>
                   <sports-property formal-name="hasPrevious" value="false"/>
                   <sports-property formal-name="limit" value="20"/>
@@ -141,14 +141,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/country/2"
+                    "href": "http://sport.api.press.net/v1/country/2"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/country/2" document-class="pa:country-detail"></pa:sports-metadata>
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/country/2" document-class="pa:country-detail"></pa:sports-metadata>
                   <pa:country id="country.2">
                       <pa:country-metadata>
                           <sports-content-codes>
@@ -220,7 +220,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/draw/6376"
+                        "href": "http://sport.api.press.net/v1/draw/6376"
                       }
                     ]
                   }
@@ -229,7 +229,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/draw?stage=837828" document-class="pa:draw-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/draw?stage=837828" document-class="pa:draw-collection">
                       <sports-property formal-name="hasNext" value="false"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="20"/>
@@ -483,14 +483,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/draw/6376"
+                    "href": "http://sport.api.press.net/v1/draw/6376"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/draw/6376" document-class="pa:draw-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/draw/6376" document-class="pa:draw-detail">
                       <sports-title>BNP Paribas Masters, Qualification Male Single draw</sports-title>
                   </pa:sports-metadata>
                   <pa:tournament id="tournament.156">
@@ -812,11 +812,11 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/event/2489667"
+                        "href": "http://sport.api.press.net/v1/event/2489667"
                       },
                       {
                         "rel": "event-composition",
-                        "href": "http://sport-uat.api.press.net/v1/event/2489667/composition"
+                        "href": "http://sport.api.press.net/v1/event/2489667/composition"
                       }
                     ]
                   },
@@ -1013,11 +1013,11 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/event/2489661"
+                        "href": "http://sport.api.press.net/v1/event/2489661"
                       },
                       {
                         "rel": "event-composition",
-                        "href": "http://sport-uat.api.press.net/v1/event/2489661/composition"
+                        "href": "http://sport.api.press.net/v1/event/2489661/composition"
                       }
                     ]
                   }
@@ -1026,7 +1026,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event?limit=2&amp;sport=2" document-class="pa:event-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/event?limit=2&amp;sport=2" document-class="pa:event-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="2"/>
@@ -1041,7 +1041,7 @@ paths:
                               <sports-content-code code-type="pa:stage" code-key="stage:848471" code-name="Qingdao"/>
                               <sports-content-code code-type="pa:round" code-key="round:3" code-name="Quarter Finals"/>
                               <sports-content-code code-type="pa:event" code-key="event:2489667" code-name="Oscar Otte-Di Wu" xsi:type="pa:sportsContentCodeComplexType">
-                                  <pa:link pa:href="http://sport-uat.api.press.net/v1/event/2489667/composition" pa:rel="event-composition"/>
+                                  <pa:link pa:href="http://sport.api.press.net/v1/event/2489667/composition" pa:rel="event-composition"/>
                               </sports-content-code>
                           </sports-content-codes>
                           <sports-property formal-name="event:comment" value="None"/>
@@ -1098,7 +1098,7 @@ paths:
                               <sports-content-code code-type="pa:stage" code-key="stage:848471" code-name="Qingdao"/>
                               <sports-content-code code-type="pa:round" code-key="round:3" code-name="Quarter Finals"/>
                               <sports-content-code code-type="pa:event" code-key="event:2489661" code-name="Jordan Thompson-Quentin Halys" xsi:type="pa:sportsContentCodeComplexType">
-                                  <pa:link pa:href="http://sport-uat.api.press.net/v1/event/2489661/composition" pa:rel="event-composition"/>
+                                  <pa:link pa:href="http://sport.api.press.net/v1/event/2489661/composition" pa:rel="event-composition"/>
                               </sports-content-code>
                           </sports-content-codes>
                           <sports-property formal-name="event:comment" value="None"/>
@@ -1358,18 +1358,18 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/event/2489667"
+                    "href": "http://sport.api.press.net/v1/event/2489667"
                   },
                   {
                     "rel": "event-composition",
-                    "href": "http://sport-uat.api.press.net/v1/event/2489667/composition"
+                    "href": "http://sport.api.press.net/v1/event/2489667/composition"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event/2489667" document-class="pa:event-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/event/2489667" document-class="pa:event-detail">
                       <sports-title>Oscar Otte-Di Wu</sports-title>
                   </pa:sports-metadata>
                   <pa:sports-event id="event.2489667">
@@ -1381,7 +1381,7 @@ paths:
                               <sports-content-code code-type="pa:stage" code-key="stage:848471" code-name="Qingdao"/>
                               <sports-content-code code-type="pa:round" code-key="round:3" code-name="Quarter Finals"/>
                               <sports-content-code code-type="pa:event" code-key="event:2489667" code-name="Oscar Otte-Di Wu" xsi:type="pa:sportsContentCodeComplexType">
-                                  <pa:link pa:href="http://sport-uat.api.press.net/v1/event/2489667/composition" pa:rel="event-composition"/>
+                                  <pa:link pa:href="http://sport.api.press.net/v1/event/2489667/composition" pa:rel="event-composition"/>
                               </sports-content-code>
                           </sports-content-codes>
                           <sports-property formal-name="event:comment" value="None"/>
@@ -1584,7 +1584,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event/2486120/actions" document-class="pa:event-actions"></pa:sports-metadata>
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/event/2486120/actions" document-class="pa:event-actions"></pa:sports-metadata>
                   <pa:sports-event id="event.2486120">
                       <team id="team.315">
                           <team-metadata key="team:315" nationality="USA">
@@ -1782,7 +1782,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event/2489667/composition" document-class="pa:event-composition"></pa:sports-metadata>
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/event/2489667/composition" document-class="pa:event-composition"></pa:sports-metadata>
                   <pa:sports-event id="event.2489667">
                       <event-metadata>
                           <sports-property formal-name="common:updated" value="2017-04-21T03:15:37Z"/>
@@ -1918,7 +1918,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/participant?sport=1" document-class="pa:participant-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/participant?sport=1" document-class="pa:participant-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="20"/>
@@ -2005,14 +2005,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/participant/315"
+                    "href": "http://sport.api.press.net/v1/participant/315"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/participant/315" document-class="pa:participant-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/participant/315" document-class="pa:participant-detail">
                       <sports-title>Minnesota Wild</sports-title>
                   </pa:sports-metadata>
                   <pa:team id="team.315">
@@ -2070,7 +2070,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/season/11091"
+                        "href": "http://sport.api.press.net/v1/season/11091"
                       }
                     ]
                   },
@@ -2090,7 +2090,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/season/9920"
+                        "href": "http://sport.api.press.net/v1/season/9920"
                       }
                     ]
                   }
@@ -2099,7 +2099,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/season?tournament=157&amp;limit=2" document-class="pa:season-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/season?tournament=157&amp;limit=2" document-class="pa:season-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="2"/>
@@ -2166,14 +2166,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/season/9920"
+                    "href": "http://sport.api.press.net/v1/season/9920"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/season/9920" document-class="pa:season-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/season/9920" document-class="pa:season-detail">
                       <sports-title>2016</sports-title>
                   </pa:sports-metadata>
                   <pa:tournament id="tournament.157">
@@ -2222,7 +2222,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/sport/24"
+                        "href": "http://sport.api.press.net/v1/sport/24"
                       }
                     ]
                   },
@@ -2233,7 +2233,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/sport/26"
+                        "href": "http://sport.api.press.net/v1/sport/26"
                       }
                     ]
                   }
@@ -2242,7 +2242,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/sport?limit=2" document-class="pa:sport-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/sport?limit=2" document-class="pa:sport-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="2"/>
@@ -2292,14 +2292,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/sport/5"
+                    "href": "http://sport.api.press.net/v1/sport/5"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/sport/5" document-class="pa:sport-detail"></pa:sports-metadata>
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/sport/5" document-class="pa:sport-detail"></pa:sports-metadata>
                   <pa:sport id="sport.5">
                       <pa:sport-metadata>
                           <sports-content-codes>
@@ -2368,7 +2368,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/standing/129936"
+                        "href": "http://sport.api.press.net/v1/standing/129936"
                       }
                     ]
                   },
@@ -2380,7 +2380,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/standing/129937"
+                        "href": "http://sport.api.press.net/v1/standing/129937"
                       }
                     ]
                   }
@@ -2389,7 +2389,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/standing?sport=2&amp;limit=2" document-class="pa:standing-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/standing?sport=2&amp;limit=2" document-class="pa:standing-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="2"/>
@@ -2490,14 +2490,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/standing/129936"
+                    "href": "http://sport.api.press.net/v1/standing/129936"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/standing/129936" document-class="pa:standing-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/standing/129936" document-class="pa:standing-detail">
                       <sports-title>Simple points based ranking list</sports-title>
                   </pa:sports-metadata>
                   <pa:standing id="standing.129936">
@@ -2593,11 +2593,11 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/stage/841699"
+                        "href": "http://sport.api.press.net/v1/stage/841699"
                       },
                       {
                         "rel": "standing",
-                        "href": "http://sport-uat.api.press.net/v1/standing?stage=841699"
+                        "href": "http://sport.api.press.net/v1/standing?stage=841699"
                       }
                     ]
                   },
@@ -2628,11 +2628,11 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/stage/841705"
+                        "href": "http://sport.api.press.net/v1/stage/841705"
                       },
                       {
                         "rel": "standing",
-                        "href": "http://sport-uat.api.press.net/v1/standing?stage=841705"
+                        "href": "http://sport.api.press.net/v1/standing?stage=841705"
                       }
                     ]
                   }
@@ -2641,7 +2641,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/stage?season=9920&amp;limit=2" document-class="pa:stage-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/stage?season=9920&amp;limit=2" document-class="pa:stage-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="2"/>
@@ -2657,7 +2657,7 @@ paths:
                                       <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
                                       <sports-content-code code-type="pa:season" code-key="season:9920" code-name="2016"/>
                                       <sports-content-code code-type="pa:stage" code-key="stage:841699" code-name="Noumea, Qualification" xsi:type="pa:sportsContentCodeComplexType">
-                                          <pa:link pa:href="http://sport-uat.api.press.net/v1/standing?stage=841699" pa:rel="standing"/>
+                                          <pa:link pa:href="http://sport.api.press.net/v1/standing?stage=841699" pa:rel="standing"/>
                                       </sports-content-code>
                                   </sports-content-codes>
                                   <sports-property formal-name="common:updated" value="2017-04-05T19:43:23Z"/>
@@ -2672,7 +2672,7 @@ paths:
                                       <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
                                       <sports-content-code code-type="pa:season" code-key="season:9920" code-name="2016"/>
                                       <sports-content-code code-type="pa:stage" code-key="stage:841705" code-name="Bangkok, Qualification" xsi:type="pa:sportsContentCodeComplexType">
-                                          <pa:link pa:href="http://sport-uat.api.press.net/v1/standing?stage=841705" pa:rel="standing"/>
+                                          <pa:link pa:href="http://sport.api.press.net/v1/standing?stage=841705" pa:rel="standing"/>
                                       </sports-content-code>
                                   </sports-content-codes>
                                   <sports-property formal-name="common:updated" value="2017-04-05T19:43:13Z"/>
@@ -2727,18 +2727,18 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/stage/841699"
+                    "href": "http://sport.api.press.net/v1/stage/841699"
                   },
                   {
                     "rel": "standing",
-                    "href": "http://sport-uat.api.press.net/v1/standing?stage=841699"
+                    "href": "http://sport.api.press.net/v1/standing?stage=841699"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/stage/841699" document-class="pa:stage-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/stage/841699" document-class="pa:stage-detail">
                       <sports-title>Noumea, Qualification</sports-title>
                   </pa:sports-metadata>
                   <pa:tournament id="tournament.157">
@@ -2751,7 +2751,7 @@ paths:
                                       <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
                                       <sports-content-code code-type="pa:season" code-key="season:9920" code-name="2016"/>
                                       <sports-content-code code-type="pa:stage" code-key="stage:841699" code-name="Noumea, Qualification" xsi:type="pa:sportsContentCodeComplexType">
-                                          <pa:link pa:href="http://sport-uat.api.press.net/v1/standing?stage=841699" pa:rel="standing"/>
+                                          <pa:link pa:href="http://sport.api.press.net/v1/standing?stage=841699" pa:rel="standing"/>
                                       </sports-content-code>
                                   </sports-content-codes>
                                   <sports-property formal-name="common:updated" value="2017-04-05T19:43:23Z"/>
@@ -2800,7 +2800,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/tournament/46"
+                        "href": "http://sport.api.press.net/v1/tournament/46"
                       }
                     ]
                   },
@@ -2816,7 +2816,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/tournament/135"
+                        "href": "http://sport.api.press.net/v1/tournament/135"
                       }
                     ]
                   }
@@ -2825,7 +2825,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/tournament?sport=1&amp;limit=1" document-class="pa:tournament-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/tournament?sport=1&amp;limit=1" document-class="pa:tournament-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="1"/>
@@ -2884,14 +2884,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/tournament/46"
+                    "href": "http://sport.api.press.net/v1/tournament/46"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/tournament/46" document-class="pa:tournament-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/tournament/46" document-class="pa:tournament-detail">
                       <sports-title>Denmark Superleague</sports-title>
                   </pa:sports-metadata>
                   <pa:tournament id="tournament.46">
@@ -2951,7 +2951,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/venue/4560"
+                        "href": "http://sport.api.press.net/v1/venue/4560"
                       }
                     ]
                   },
@@ -2973,7 +2973,7 @@ paths:
                     "links": [
                       {
                         "rel": "self",
-                        "href": "http://sport-uat.api.press.net/v1/venue/2515"
+                        "href": "http://sport.api.press.net/v1/venue/2515"
                       }
                     ]
                   }
@@ -2982,7 +2982,7 @@ paths:
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/venue?sport=1" document-class="pa:venue-collection">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/venue?sport=1" document-class="pa:venue-collection">
                       <sports-property formal-name="hasNext" value="true"/>
                       <sports-property formal-name="hasPrevious" value="false"/>
                       <sports-property formal-name="limit" value="20"/>
@@ -3067,14 +3067,14 @@ paths:
                 "links": [
                   {
                     "rel": "self",
-                    "href": "http://sport-uat.api.press.net/v1/venue/46"
+                    "href": "http://sport.api.press.net/v1/venue/46"
                   }
                 ]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/venue/46" document-class="pa:venue-detail">
+                  <pa:sports-metadata doc-id="http://sport.api.press.net/v1/venue/46" document-class="pa:venue-detail">
                       <sports-title>Iberostar Estadio</sports-title>
                   </pa:sports-metadata>
                   <pa:site id="venue.46">
