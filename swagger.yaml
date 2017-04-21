@@ -180,6 +180,82 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 20,
+                "hasNext": false,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 6376,
+                    "name": "BNP Paribas Masters, Qualification Male Single draw",
+                    "type": "Male Single",
+                    "updated": "2014-11-19T00:00:23Z",
+                    "stage": {
+                      "id": 837828,
+                      "name": "BNP Paribas Masters, Qualification",
+                      "gender": "male",
+                      "start": "2015-10-30",
+                      "end": "2015-11-01",
+                      "country": {
+                        "id": 5,
+                        "name": "France"
+                      }
+                    },
+                    "season": {
+                      "id": 8986,
+                      "name": "2015"
+                    },
+                    "tournament": {
+                      "id": 156,
+                      "name": "ATP",
+                      "gender": "male"
+                    },
+                    "sport": {
+                      "id": 2,
+                      "name": "Tennis"
+                    },
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/draw/6376"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/draw?stage=837828" document-class="pa:draw-collection">
+                      <sports-property formal-name="hasNext" value="false"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="20"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:tournament id="tournament.156">
+                      <tournament-division id="season.8986">
+                          <tournament-part id="stage.837828">
+                              <tournament-part id="draw.6376">
+                                  <tournament-part-metadata key="draw:6376" type="pa:draw">
+                                      <sports-content-codes>
+                                          <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                                          <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                                          <sports-content-code code-type="pa:tournament" code-key="tournament:156" code-name="ATP"/>
+                                          <sports-content-code code-type="pa:season" code-key="season:8986" code-name="2015"/>
+                                          <sports-content-code code-type="pa:stage" code-key="stage:837828" code-name="BNP Paribas Masters, Qualification"/>
+                                          <sports-content-code code-type="pa:draw" code-key="draw:6376" code-name="BNP Paribas Masters, Qualification Male Single draw"/>
+                                      </sports-content-codes>
+                                      <sports-property formal-name="common:updated" value="2014-11-19T00:00:23Z"/>
+                                      <name>BNP Paribas Masters, Qualification Male Single draw</name>
+                                  </tournament-part-metadata>
+                              </tournament-part>
+                          </tournament-part>
+                      </tournament-division>
+                  </pa:tournament>
+              </pa:sports-content>
   '/draw/{drawId}':
     get:
       description: Return the draw's details.
@@ -196,6 +272,308 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 6376,
+                "name": "BNP Paribas Masters, Qualification Male Single draw",
+                "type": "Male Single",
+                "updated": "2014-11-19T00:00:23Z",
+                "stage": {
+                  "id": 837828,
+                  "name": "BNP Paribas Masters, Qualification",
+                  "gender": "male",
+                  "start": "2015-10-30",
+                  "end": "2015-11-01",
+                  "country": {
+                    "id": 5,
+                    "name": "France"
+                  }
+                },
+                "season": {
+                  "id": 8986,
+                  "name": "2015"
+                },
+                "tournament": {
+                  "id": 156,
+                  "name": "ATP",
+                  "gender": "male"
+                },
+                "sport": {
+                  "id": 2,
+                  "name": "Tennis"
+                },
+                "rounds": [
+                  {
+                    "id": 13,
+                    "name": "1/12 (Special Qual)",
+                    "knockout": true,
+                    "events": [
+                      {
+                        "id": 2133215,
+                        "name": "Aljaz Bedene-Gregoire Barrere",
+                        "order": 1,
+                        "date": "2015-10-31T11:00:00Z",
+                        "entrants": [
+                          {
+                            "number": 1,
+                            "participant": {
+                              "id": 185131,
+                              "name": "Aljaz Bedene",
+                              "firstName": "Aljaz",
+                              "lastName": "Bedene",
+                              "gender": "male",
+                              "type": "athlete",
+                              "country": {
+                                "id": 2,
+                                "name": "England"
+                              }
+                            }
+                          },
+                          {
+                            "number": 2,
+                            "participant": {
+                              "id": 313143,
+                              "name": "Gregoire Barrere",
+                              "firstName": "Gregoire",
+                              "lastName": "Barrere",
+                              "gender": "male",
+                              "type": "athlete",
+                              "country": {
+                                "id": 5,
+                                "name": "France"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": 2133216,
+                        "name": "Ivan Dodig-Jerzy Janowicz",
+                        "order": 2,
+                        "date": "2015-10-31T11:00:00Z",
+                        "entrants": [
+                          {
+                            "number": 1,
+                            "participant": {
+                              "id": 68251,
+                              "name": "Ivan Dodig",
+                              "firstName": "Ivan",
+                              "lastName": "Dodig",
+                              "gender": "male",
+                              "type": "athlete",
+                              "country": {
+                                "id": 44,
+                                "name": "Croatia"
+                              }
+                            }
+                          },
+                          {
+                            "number": 2,
+                            "participant": {
+                              "id": 112698,
+                              "name": "Jerzy Janowicz",
+                              "firstName": "Jerzy",
+                              "lastName": "Janowicz",
+                              "gender": "male",
+                              "type": "athlete",
+                              "country": {
+                                "id": 47,
+                                "name": "Poland"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 14,
+                    "name": "1/6 (Special Qual)",
+                    "knockout": true,
+                    "events": [
+                      {
+                        "id": 2133564,
+                        "name": "Aljaz Bedene-Jerzy Janowicz",
+                        "order": 1,
+                        "date": "2015-11-01T11:00:00Z",
+                        "entrants": [
+                          {
+                            "number": 1,
+                            "participant": {
+                              "id": 185131,
+                              "name": "Aljaz Bedene",
+                              "firstName": "Aljaz",
+                              "lastName": "Bedene",
+                              "gender": "male",
+                              "type": "athlete",
+                              "country": {
+                                "id": 2,
+                                "name": "England"
+                              }
+                            }
+                          },
+                          {
+                            "number": 2,
+                            "participant": {
+                              "id": 112698,
+                              "name": "Jerzy Janowicz",
+                              "firstName": "Jerzy",
+                              "lastName": "Janowicz",
+                              "gender": "male",
+                              "type": "athlete",
+                              "country": {
+                                "id": 47,
+                                "name": "Poland"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "meta": {
+                  "start-round-fk": {
+                    "code": "draw:start-round-fk",
+                    "name": "Start Round FK",
+                    "value": "13"
+                  },
+                  "end-round-fk": {
+                    "code": "draw:end-round-fk",
+                    "name": "End Round FK",
+                    "value": "14"
+                  },
+                  "regular-set-count": {
+                    "code": "draw:regular-set-count",
+                    "name": "Regular Set Count",
+                    "value": "3"
+                  },
+                  "final-set-count": {
+                    "code": "draw:final-set-count",
+                    "name": "Final Set Count",
+                    "value": "3"
+                  },
+                  "default-start-time": {
+                    "code": "draw:default-start-time",
+                    "name": "Default Start Time",
+                    "value": "11:00:00"
+                  },
+                  "live": {
+                    "code": "draw:live",
+                    "name": "Live",
+                    "value": "yes"
+                  },
+                  "last-set-tiebreak": {
+                    "code": "draw:last-set-tiebreak",
+                    "name": "Last Set Tiebreak",
+                    "value": "yes"
+                  },
+                  "no-deuce-advantage": {
+                    "code": "draw:no-deuce-advantage",
+                    "name": "No Deuce Advantage",
+                    "value": "no"
+                  },
+                  "point-by-point": {
+                    "code": "draw:point-by-point",
+                    "name": "Point By Point",
+                    "value": "13"
+                  }
+                },
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/draw/6376"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/draw/6376" document-class="pa:draw-detail">
+                      <sports-title>BNP Paribas Masters, Qualification Male Single draw</sports-title>
+                  </pa:sports-metadata>
+                  <pa:tournament id="tournament.156">
+                      <tournament-division id="season.8986">
+                          <tournament-part id="stage.837828">
+                              <tournament-part id="draw.6376">
+                                  <tournament-part-metadata key="draw:6376" type="pa:draw">
+                                      <sports-content-codes>
+                                          <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                                          <sports-content-code code-type="pa:gender" code-key="gender:male" code-name="male"/>
+                                          <sports-content-code code-type="pa:tournament" code-key="tournament:156" code-name="ATP"/>
+                                          <sports-content-code code-type="pa:season" code-key="season:8986" code-name="2015"/>
+                                          <sports-content-code code-type="pa:stage" code-key="stage:837828" code-name="BNP Paribas Masters, Qualification"/>
+                                          <sports-content-code code-type="pa:draw" code-key="draw:6376" code-name="BNP Paribas Masters, Qualification Male Single draw"/>
+                                      </sports-content-codes>
+                                      <sports-property formal-name="draw:start-round-fk" value="13"/>
+                                      <sports-property formal-name="draw:end-round-fk" value="14"/>
+                                      <sports-property formal-name="draw:regular-set-count" value="3"/>
+                                      <sports-property formal-name="draw:final-set-count" value="3"/>
+                                      <sports-property formal-name="draw:default-start-time" value="11:00:00"/>
+                                      <sports-property formal-name="draw:live" value="yes"/>
+                                      <sports-property formal-name="draw:last-set-tiebreak" value="yes"/>
+                                      <sports-property formal-name="draw:no-deuce-advantage" value="no"/>
+                                      <sports-property formal-name="draw:point-by-point" value="13"/>
+                                      <sports-property formal-name="common:updated" value="2014-11-19T00:00:23Z"/>
+                                      <name>BNP Paribas Masters, Qualification Male Single draw</name>
+                                  </tournament-part-metadata>
+                                  <tournament-part id="round.13">
+                                      <tournament-part-metadata key="round:13" type="pa:round" number="13">
+                                          <sports-property formal-name="round:knockout" value="true"/>
+                                          <name>1/12 (Special Qual)</name>
+                                      </tournament-part-metadata>
+                                      <sports-event id="event.2133215">
+                                          <event-metadata key="event:2133215" event-number="1" start-date-time="2015-10-31T11:00:00+00:00"></event-metadata>
+                                          <player>
+                                              <player-metadata key="player:185131" gender="male" nationality="England">
+                                                  <name>Aljaz Bedene</name>
+                                              </player-metadata>
+                                          </player>
+                                          <player>
+                                              <player-metadata key="player:313143" gender="male" nationality="France">
+                                                  <name>Gregoire Barrere</name>
+                                              </player-metadata>
+                                          </player>
+                                      </sports-event>
+                                      <sports-event id="event.2133216">
+                                          <event-metadata key="event:2133216" event-number="2" start-date-time="2015-10-31T11:00:00+00:00"></event-metadata>
+                                          <player>
+                                              <player-metadata key="player:68251" gender="male" nationality="Croatia">
+                                                  <name>Ivan Dodig</name>
+                                              </player-metadata>
+                                          </player>
+                                          <player>
+                                              <player-metadata key="player:112698" gender="male" nationality="Poland">
+                                                  <name>Jerzy Janowicz</name>
+                                              </player-metadata>
+                                          </player>
+                                      </sports-event>
+                                  </tournament-part>
+                                  <tournament-part id="round.14">
+                                      <tournament-part-metadata key="round:14" type="pa:round" number="14">
+                                          <sports-property formal-name="round:knockout" value="true"/>
+                                          <name>1/6 (Special Qual)</name>
+                                      </tournament-part-metadata>
+                                      <sports-event id="event.2133564">
+                                          <event-metadata key="event:2133564" event-number="1" start-date-time="2015-11-01T11:00:00+00:00"></event-metadata>
+                                          <player>
+                                              <player-metadata key="player:185131" gender="male" nationality="England">
+                                                  <name>Aljaz Bedene</name>
+                                              </player-metadata>
+                                          </player>
+                                          <player>
+                                              <player-metadata key="player:112698" gender="male" nationality="Poland">
+                                                  <name>Jerzy Janowicz</name>
+                                              </player-metadata>
+                                          </player>
+                                      </sports-event>
+                                  </tournament-part>
+                              </tournament-part>
+                          </tournament-part>
+                      </tournament-division>
+                  </pa:tournament>
+              </pa:sports-content>
   /event:
     get:
       description: >-
