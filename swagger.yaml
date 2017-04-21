@@ -611,6 +611,542 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "offset": 0,
+                "limit": 2,
+                "hasNext": true,
+                "hasPrevious": false,
+                "items": [
+                  {
+                    "id": 2489667,
+                    "name": "Oscar Otte-Di Wu",
+                    "status": "Finished",
+                    "date": "2017-04-21T03:05:00Z",
+                    "updated": "2017-04-21T04:01:44Z",
+                    "entrants": [
+                      {
+                        "id": 8256448,
+                        "number": 1,
+                        "participant": {
+                          "id": 292384,
+                          "name": "Oscar Otte",
+                          "firstName": "Oscar",
+                          "lastName": "Otte",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 3,
+                            "name": "Germany"
+                          }
+                        },
+                        "results": {
+                          "final-result": {
+                            "code": "result:final-result",
+                            "name": "Final Result",
+                            "value": "won"
+                          },
+                          "game-score": {
+                            "code": "result:game-score",
+                            "name": "Game Score",
+                            "value": ""
+                          },
+                          "running-score": {
+                            "code": "result:running-score",
+                            "name": "Running Score",
+                            "value": "2"
+                          },
+                          "set-1": {
+                            "code": "result:set-1",
+                            "name": "Set 1",
+                            "value": "6"
+                          },
+                          "set-2": {
+                            "code": "result:set-2",
+                            "name": "Set 2",
+                            "value": "6"
+                          },
+                          "won-sets": {
+                            "code": "result:won-sets",
+                            "name": "Won Sets",
+                            "value": "2"
+                          }
+                        }
+                      },
+                      {
+                        "id": 8256449,
+                        "number": 2,
+                        "participant": {
+                          "id": 112773,
+                          "name": "Di Wu",
+                          "firstName": "Di",
+                          "lastName": "Wu",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 125,
+                            "name": "China"
+                          }
+                        },
+                        "results": {
+                          "final-result": {
+                            "code": "result:final-result",
+                            "name": "Final Result",
+                            "value": "lost"
+                          },
+                          "game-score": {
+                            "code": "result:game-score",
+                            "name": "Game Score",
+                            "value": ""
+                          },
+                          "running-score": {
+                            "code": "result:running-score",
+                            "name": "Running Score",
+                            "value": "0"
+                          },
+                          "set-1": {
+                            "code": "result:set-1",
+                            "name": "Set 1",
+                            "value": "0"
+                          },
+                          "set-2": {
+                            "code": "result:set-2",
+                            "name": "Set 2",
+                            "value": "1"
+                          },
+                          "won-sets": {
+                            "code": "result:won-sets",
+                            "name": "Won Sets",
+                            "value": "0"
+                          }
+                        }
+                      }
+                    ],
+                    "round": {
+                      "id": 3,
+                      "name": "Quarter Finals",
+                      "knockout": true
+                    },
+                    "stage": {
+                      "id": 848471,
+                      "name": "Qingdao",
+                      "gender": "male",
+                      "start": "2017-04-16",
+                      "end": "2017-04-23",
+                      "country": {
+                        "id": 125,
+                        "name": "China"
+                      }
+                    },
+                    "season": {
+                      "id": 11091,
+                      "name": "2017"
+                    },
+                    "tournament": {
+                      "id": 157,
+                      "name": "Challenger",
+                      "gender": "male"
+                    },
+                    "sport": {
+                      "id": 2,
+                      "name": "Tennis"
+                    },
+                    "meta": {
+                      "comment": {
+                        "code": "event:comment",
+                        "name": "Comment",
+                        "value": "None"
+                      },
+                      "event-type-name": {
+                        "code": "event:event-type-name",
+                        "name": "Event Type Name",
+                        "value": "Male Single"
+                      },
+                      "firsttoserve": {
+                        "code": "event:firsttoserve",
+                        "name": "Firsttoserve",
+                        "value": "a"
+                      },
+                      "game-ended": {
+                        "code": "event:game-ended",
+                        "name": "Game Ended",
+                        "value": "2017-04-21T03:59:28Z"
+                      },
+                      "game-started": {
+                        "code": "event:game-started",
+                        "name": "Game Started",
+                        "value": "2017-04-21T03:08:17Z"
+                      },
+                      "last-set-tiebreak": {
+                        "code": "event:last-set-tiebreak",
+                        "name": "Last Set Tiebreak",
+                        "value": "yes"
+                      },
+                      "live": {
+                        "code": "event:live",
+                        "name": "Live",
+                        "value": "yes"
+                      },
+                      "point-by-point": {
+                        "code": "event:point-by-point",
+                        "name": "Point By Point",
+                        "value": "yes"
+                      },
+                      "sets": {
+                        "code": "event:sets",
+                        "name": "Sets",
+                        "value": "3"
+                      },
+                      "tennis-round-number": {
+                        "code": "event:tennis-round-number",
+                        "name": "Tennis Round Number",
+                        "value": "6002"
+                      },
+                      "winner": {
+                        "code": "event:winner",
+                        "name": "Winner",
+                        "value": "a"
+                      }
+                    },
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/event/2489667"
+                      },
+                      {
+                        "rel": "event-composition",
+                        "href": "http://sport-uat.api.press.net/v1/event/2489667/composition"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 2489661,
+                    "name": "Jordan Thompson-Quentin Halys",
+                    "status": "Finished",
+                    "date": "2017-04-21T03:10:00Z",
+                    "updated": "2017-04-21T04:24:46Z",
+                    "entrants": [
+                      {
+                        "id": 8256436,
+                        "number": 1,
+                        "participant": {
+                          "id": 420223,
+                          "name": "Jordan Thompson",
+                          "firstName": "Jordan",
+                          "lastName": "Thompson",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 39,
+                            "name": "Australia"
+                          }
+                        },
+                        "results": {
+                          "final-result": {
+                            "code": "result:final-result",
+                            "name": "Final Result",
+                            "value": "lost"
+                          },
+                          "game-score": {
+                            "code": "result:game-score",
+                            "name": "Game Score",
+                            "value": ""
+                          },
+                          "running-score": {
+                            "code": "result:running-score",
+                            "name": "Running Score",
+                            "value": "0"
+                          },
+                          "set-1": {
+                            "code": "result:set-1",
+                            "name": "Set 1",
+                            "value": "4"
+                          },
+                          "set-2": {
+                            "code": "result:set-2",
+                            "name": "Set 2",
+                            "value": "1"
+                          },
+                          "won-sets": {
+                            "code": "result:won-sets",
+                            "name": "Won Sets",
+                            "value": "0"
+                          }
+                        }
+                      },
+                      {
+                        "id": 8256437,
+                        "number": 2,
+                        "participant": {
+                          "id": 385566,
+                          "name": "Quentin Halys",
+                          "firstName": "Quentin",
+                          "lastName": "Halys",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 5,
+                            "name": "France"
+                          }
+                        },
+                        "results": {
+                          "final-result": {
+                            "code": "result:final-result",
+                            "name": "Final Result",
+                            "value": "won"
+                          },
+                          "game-score": {
+                            "code": "result:game-score",
+                            "name": "Game Score",
+                            "value": ""
+                          },
+                          "running-score": {
+                            "code": "result:running-score",
+                            "name": "Running Score",
+                            "value": "2"
+                          },
+                          "set-1": {
+                            "code": "result:set-1",
+                            "name": "Set 1",
+                            "value": "6"
+                          },
+                          "set-2": {
+                            "code": "result:set-2",
+                            "name": "Set 2",
+                            "value": "6"
+                          },
+                          "won-sets": {
+                            "code": "result:won-sets",
+                            "name": "Won Sets",
+                            "value": "2"
+                          }
+                        }
+                      }
+                    ],
+                    "round": {
+                      "id": 3,
+                      "name": "Quarter Finals",
+                      "knockout": true
+                    },
+                    "stage": {
+                      "id": 848471,
+                      "name": "Qingdao",
+                      "gender": "male",
+                      "start": "2017-04-16",
+                      "end": "2017-04-23",
+                      "country": {
+                        "id": 125,
+                        "name": "China"
+                      }
+                    },
+                    "season": {
+                      "id": 11091,
+                      "name": "2017"
+                    },
+                    "tournament": {
+                      "id": 157,
+                      "name": "Challenger",
+                      "gender": "male"
+                    },
+                    "sport": {
+                      "id": 2,
+                      "name": "Tennis"
+                    },
+                    "meta": {
+                      "comment": {
+                        "code": "event:comment",
+                        "name": "Comment",
+                        "value": "None"
+                      },
+                      "event-type-name": {
+                        "code": "event:event-type-name",
+                        "name": "Event Type Name",
+                        "value": "Male Single"
+                      },
+                      "firsttoserve": {
+                        "code": "event:firsttoserve",
+                        "name": "Firsttoserve",
+                        "value": "b"
+                      },
+                      "game-ended": {
+                        "code": "event:game-ended",
+                        "name": "Game Ended",
+                        "value": "2017-04-21T04:22:36Z"
+                      },
+                      "game-started": {
+                        "code": "event:game-started",
+                        "name": "Game Started",
+                        "value": "2017-04-21T03:12:13Z"
+                      },
+                      "last-set-tiebreak": {
+                        "code": "event:last-set-tiebreak",
+                        "name": "Last Set Tiebreak",
+                        "value": "yes"
+                      },
+                      "live": {
+                        "code": "event:live",
+                        "name": "Live",
+                        "value": "yes"
+                      },
+                      "point-by-point": {
+                        "code": "event:point-by-point",
+                        "name": "Point By Point",
+                        "value": "yes"
+                      },
+                      "sets": {
+                        "code": "event:sets",
+                        "name": "Sets",
+                        "value": "3"
+                      },
+                      "tennis-round-number": {
+                        "code": "event:tennis-round-number",
+                        "name": "Tennis Round Number",
+                        "value": "6001"
+                      },
+                      "winner": {
+                        "code": "event:winner",
+                        "name": "Winner",
+                        "value": "b"
+                      }
+                    },
+                    "links": [
+                      {
+                        "rel": "self",
+                        "href": "http://sport-uat.api.press.net/v1/event/2489661"
+                      },
+                      {
+                        "rel": "event-composition",
+                        "href": "http://sport-uat.api.press.net/v1/event/2489661/composition"
+                      }
+                    ]
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event?limit=2&amp;sport=2" document-class="pa:event-collection">
+                      <sports-property formal-name="hasNext" value="true"/>
+                      <sports-property formal-name="hasPrevious" value="false"/>
+                      <sports-property formal-name="limit" value="2"/>
+                      <sports-property formal-name="offset" value="0"/>
+                  </pa:sports-metadata>
+                  <pa:sports-event id="event.2489667">
+                      <event-metadata start-date-time="2017-04-21T03:05:00Z" event-status="pa:finished">
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                              <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
+                              <sports-content-code code-type="pa:season" code-key="season:11091" code-name="2017"/>
+                              <sports-content-code code-type="pa:stage" code-key="stage:848471" code-name="Qingdao"/>
+                              <sports-content-code code-type="pa:round" code-key="round:3" code-name="Quarter Finals"/>
+                              <sports-content-code code-type="pa:event" code-key="event:2489667" code-name="Oscar Otte-Di Wu" xsi:type="pa:sportsContentCodeComplexType">
+                                  <pa:link pa:href="http://sport-uat.api.press.net/v1/event/2489667/composition" pa:rel="event-composition"/>
+                              </sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="event:comment" value="None"/>
+                          <sports-property formal-name="event:event-type-name" value="Male Single"/>
+                          <sports-property formal-name="event:firsttoserve" value="a"/>
+                          <sports-property formal-name="event:game-ended" value="2017-04-21T03:59:28Z"/>
+                          <sports-property formal-name="event:game-started" value="2017-04-21T03:08:17Z"/>
+                          <sports-property formal-name="event:last-set-tiebreak" value="yes"/>
+                          <sports-property formal-name="event:live" value="yes"/>
+                          <sports-property formal-name="event:point-by-point" value="yes"/>
+                          <sports-property formal-name="event:sets" value="3"/>
+                          <sports-property formal-name="event:tennis-round-number" value="6002"/>
+                          <sports-property formal-name="event:winner" value="a"/>
+                          <sports-property formal-name="common:updated" value="2017-04-21T04:01:44Z"/>
+                          <name>Oscar Otte-Di Wu</name>
+                      </event-metadata>
+                      <player>
+                          <player-metadata key="player:292384" gender="male" nationality="Germany">
+                              <name>Oscar Otte</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="result:final-result" value="won"/>
+                                  <stat stat-type="result:game-score" value=""/>
+                                  <stat stat-type="result:running-score" value="2"/>
+                                  <stat stat-type="result:set-1" value="6"/>
+                                  <stat stat-type="result:set-2" value="6"/>
+                                  <stat stat-type="result:won-sets" value="2"/>
+                              </stats>
+                          </player-stats>
+                      </player>
+                      <player>
+                          <player-metadata key="player:112773" gender="male" nationality="China">
+                              <name>Di Wu</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="result:final-result" value="lost"/>
+                                  <stat stat-type="result:game-score" value=""/>
+                                  <stat stat-type="result:running-score" value="0"/>
+                                  <stat stat-type="result:set-1" value="0"/>
+                                  <stat stat-type="result:set-2" value="1"/>
+                                  <stat stat-type="result:won-sets" value="0"/>
+                              </stats>
+                          </player-stats>
+                      </player>
+                  </pa:sports-event>
+                  <pa:sports-event id="event.2489661">
+                      <event-metadata start-date-time="2017-04-21T03:10:00Z" event-status="pa:finished">
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                              <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
+                              <sports-content-code code-type="pa:season" code-key="season:11091" code-name="2017"/>
+                              <sports-content-code code-type="pa:stage" code-key="stage:848471" code-name="Qingdao"/>
+                              <sports-content-code code-type="pa:round" code-key="round:3" code-name="Quarter Finals"/>
+                              <sports-content-code code-type="pa:event" code-key="event:2489661" code-name="Jordan Thompson-Quentin Halys" xsi:type="pa:sportsContentCodeComplexType">
+                                  <pa:link pa:href="http://sport-uat.api.press.net/v1/event/2489661/composition" pa:rel="event-composition"/>
+                              </sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="event:comment" value="None"/>
+                          <sports-property formal-name="event:event-type-name" value="Male Single"/>
+                          <sports-property formal-name="event:firsttoserve" value="b"/>
+                          <sports-property formal-name="event:game-ended" value="2017-04-21T04:22:36Z"/>
+                          <sports-property formal-name="event:game-started" value="2017-04-21T03:12:13Z"/>
+                          <sports-property formal-name="event:last-set-tiebreak" value="yes"/>
+                          <sports-property formal-name="event:live" value="yes"/>
+                          <sports-property formal-name="event:point-by-point" value="yes"/>
+                          <sports-property formal-name="event:sets" value="3"/>
+                          <sports-property formal-name="event:tennis-round-number" value="6001"/>
+                          <sports-property formal-name="event:winner" value="b"/>
+                          <sports-property formal-name="common:updated" value="2017-04-21T04:24:46Z"/>
+                          <name>Jordan Thompson-Quentin Halys</name>
+                      </event-metadata>
+                      <player>
+                          <player-metadata key="player:420223" gender="male" nationality="Australia">
+                              <name>Jordan Thompson</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="result:final-result" value="lost"/>
+                                  <stat stat-type="result:game-score" value=""/>
+                                  <stat stat-type="result:running-score" value="0"/>
+                                  <stat stat-type="result:set-1" value="4"/>
+                                  <stat stat-type="result:set-2" value="1"/>
+                                  <stat stat-type="result:won-sets" value="0"/>
+                              </stats>
+                          </player-stats>
+                      </player>
+                      <player>
+                          <player-metadata key="player:385566" gender="male" nationality="France">
+                              <name>Quentin Halys</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="result:final-result" value="won"/>
+                                  <stat stat-type="result:game-score" value=""/>
+                                  <stat stat-type="result:running-score" value="2"/>
+                                  <stat stat-type="result:set-1" value="6"/>
+                                  <stat stat-type="result:set-2" value="6"/>
+                                  <stat stat-type="result:won-sets" value="2"/>
+                              </stats>
+                          </player-stats>
+                      </player>
+                  </pa:sports-event>
+              </pa:sports-content>
   '/event/{eventId}':
     get:
       description: Return the event's details.
@@ -627,11 +1163,279 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "id": 2489667,
+                "name": "Oscar Otte-Di Wu",
+                "status": "Finished",
+                "date": "2017-04-21T03:05:00Z",
+                "updated": "2017-04-21T04:01:44Z",
+                "entrants": [
+                  {
+                    "id": 8256448,
+                    "number": 1,
+                    "participant": {
+                      "id": 292384,
+                      "name": "Oscar Otte",
+                      "firstName": "Oscar",
+                      "lastName": "Otte",
+                      "gender": "male",
+                      "type": "athlete",
+                      "country": {
+                        "id": 3,
+                        "name": "Germany"
+                      }
+                    },
+                    "results": {
+                      "final-result": {
+                        "code": "result:final-result",
+                        "name": "Final Result",
+                        "value": "won"
+                      },
+                      "game-score": {
+                        "code": "result:game-score",
+                        "name": "Game Score",
+                        "value": ""
+                      },
+                      "running-score": {
+                        "code": "result:running-score",
+                        "name": "Running Score",
+                        "value": "2"
+                      },
+                      "set-1": {
+                        "code": "result:set-1",
+                        "name": "Set 1",
+                        "value": "6"
+                      },
+                      "set-2": {
+                        "code": "result:set-2",
+                        "name": "Set 2",
+                        "value": "6"
+                      },
+                      "won-sets": {
+                        "code": "result:won-sets",
+                        "name": "Won Sets",
+                        "value": "2"
+                      }
+                    }
+                  },
+                  {
+                    "id": 8256449,
+                    "number": 2,
+                    "participant": {
+                      "id": 112773,
+                      "name": "Di Wu",
+                      "firstName": "Di",
+                      "lastName": "Wu",
+                      "gender": "male",
+                      "type": "athlete",
+                      "country": {
+                        "id": 125,
+                        "name": "China"
+                      }
+                    },
+                    "results": {
+                      "final-result": {
+                        "code": "result:final-result",
+                        "name": "Final Result",
+                        "value": "lost"
+                      },
+                      "game-score": {
+                        "code": "result:game-score",
+                        "name": "Game Score",
+                        "value": ""
+                      },
+                      "running-score": {
+                        "code": "result:running-score",
+                        "name": "Running Score",
+                        "value": "0"
+                      },
+                      "set-1": {
+                        "code": "result:set-1",
+                        "name": "Set 1",
+                        "value": "0"
+                      },
+                      "set-2": {
+                        "code": "result:set-2",
+                        "name": "Set 2",
+                        "value": "1"
+                      },
+                      "won-sets": {
+                        "code": "result:won-sets",
+                        "name": "Won Sets",
+                        "value": "0"
+                      }
+                    }
+                  }
+                ],
+                "round": {
+                  "id": 3,
+                  "name": "Quarter Finals",
+                  "knockout": true
+                },
+                "stage": {
+                  "id": 848471,
+                  "name": "Qingdao",
+                  "gender": "male",
+                  "start": "2017-04-16",
+                  "end": "2017-04-23",
+                  "country": {
+                    "id": 125,
+                    "name": "China"
+                  }
+                },
+                "season": {
+                  "id": 11091,
+                  "name": "2017"
+                },
+                "tournament": {
+                  "id": 157,
+                  "name": "Challenger",
+                  "gender": "male"
+                },
+                "sport": {
+                  "id": 2,
+                  "name": "Tennis"
+                },
+                "meta": {
+                  "comment": {
+                    "code": "event:comment",
+                    "name": "Comment",
+                    "value": "None"
+                  },
+                  "event-type-name": {
+                    "code": "event:event-type-name",
+                    "name": "Event Type Name",
+                    "value": "Male Single"
+                  },
+                  "firsttoserve": {
+                    "code": "event:firsttoserve",
+                    "name": "Firsttoserve",
+                    "value": "a"
+                  },
+                  "game-ended": {
+                    "code": "event:game-ended",
+                    "name": "Game Ended",
+                    "value": "2017-04-21T03:59:28Z"
+                  },
+                  "game-started": {
+                    "code": "event:game-started",
+                    "name": "Game Started",
+                    "value": "2017-04-21T03:08:17Z"
+                  },
+                  "last-set-tiebreak": {
+                    "code": "event:last-set-tiebreak",
+                    "name": "Last Set Tiebreak",
+                    "value": "yes"
+                  },
+                  "live": {
+                    "code": "event:live",
+                    "name": "Live",
+                    "value": "yes"
+                  },
+                  "point-by-point": {
+                    "code": "event:point-by-point",
+                    "name": "Point By Point",
+                    "value": "yes"
+                  },
+                  "sets": {
+                    "code": "event:sets",
+                    "name": "Sets",
+                    "value": "3"
+                  },
+                  "tennis-round-number": {
+                    "code": "event:tennis-round-number",
+                    "name": "Tennis Round Number",
+                    "value": "6002"
+                  },
+                  "winner": {
+                    "code": "event:winner",
+                    "name": "Winner",
+                    "value": "a"
+                  }
+                },
+                "links": [
+                  {
+                    "rel": "self",
+                    "href": "http://sport-uat.api.press.net/v1/event/2489667"
+                  },
+                  {
+                    "rel": "event-composition",
+                    "href": "http://sport-uat.api.press.net/v1/event/2489667/composition"
+                  }
+                ]
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event/2489667" document-class="pa:event-detail">
+                      <sports-title>Oscar Otte-Di Wu</sports-title>
+                  </pa:sports-metadata>
+                  <pa:sports-event id="event.2489667">
+                      <event-metadata start-date-time="2017-04-21T03:05:00Z" event-status="pa:finished">
+                          <sports-content-codes>
+                              <sports-content-code code-type="pa:sport" code-key="sport:2" code-name="Tennis"/>
+                              <sports-content-code code-type="pa:tournament" code-key="tournament:157" code-name="Challenger"/>
+                              <sports-content-code code-type="pa:season" code-key="season:11091" code-name="2017"/>
+                              <sports-content-code code-type="pa:stage" code-key="stage:848471" code-name="Qingdao"/>
+                              <sports-content-code code-type="pa:round" code-key="round:3" code-name="Quarter Finals"/>
+                              <sports-content-code code-type="pa:event" code-key="event:2489667" code-name="Oscar Otte-Di Wu" xsi:type="pa:sportsContentCodeComplexType">
+                                  <pa:link pa:href="http://sport-uat.api.press.net/v1/event/2489667/composition" pa:rel="event-composition"/>
+                              </sports-content-code>
+                          </sports-content-codes>
+                          <sports-property formal-name="event:comment" value="None"/>
+                          <sports-property formal-name="event:event-type-name" value="Male Single"/>
+                          <sports-property formal-name="event:firsttoserve" value="a"/>
+                          <sports-property formal-name="event:game-ended" value="2017-04-21T03:59:28Z"/>
+                          <sports-property formal-name="event:game-started" value="2017-04-21T03:08:17Z"/>
+                          <sports-property formal-name="event:last-set-tiebreak" value="yes"/>
+                          <sports-property formal-name="event:live" value="yes"/>
+                          <sports-property formal-name="event:point-by-point" value="yes"/>
+                          <sports-property formal-name="event:sets" value="3"/>
+                          <sports-property formal-name="event:tennis-round-number" value="6002"/>
+                          <sports-property formal-name="event:winner" value="a"/>
+                          <sports-property formal-name="common:updated" value="2017-04-21T04:01:44Z"/>
+                          <name>Oscar Otte-Di Wu</name>
+                      </event-metadata>
+                      <player>
+                          <player-metadata key="player:292384" gender="male" nationality="Germany">
+                              <name>Oscar Otte</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="result:final-result" value="won"/>
+                                  <stat stat-type="result:game-score" value=""/>
+                                  <stat stat-type="result:running-score" value="2"/>
+                                  <stat stat-type="result:set-1" value="6"/>
+                                  <stat stat-type="result:set-2" value="6"/>
+                                  <stat stat-type="result:won-sets" value="2"/>
+                              </stats>
+                          </player-stats>
+                      </player>
+                      <player>
+                          <player-metadata key="player:112773" gender="male" nationality="China">
+                              <name>Di Wu</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="result:final-result" value="lost"/>
+                                  <stat stat-type="result:game-score" value=""/>
+                                  <stat stat-type="result:running-score" value="0"/>
+                                  <stat stat-type="result:set-1" value="0"/>
+                                  <stat stat-type="result:set-2" value="1"/>
+                                  <stat stat-type="result:won-sets" value="0"/>
+                              </stats>
+                          </player-stats>
+                      </player>
+                  </pa:sports-event>
+              </pa:sports-content>
   '/event/{eventId}/actions':
     get:
       description: Return the event's actions.
       tags:
         - Event
+        - Action
       operationId: getEventActions
       parameters:
         - $ref: '#/parameters/Accept'
@@ -642,12 +1446,208 @@ paths:
         '200':
           description: ''
           schema:
-            type: object
+            type: array
+          examples:
+            application/json: |-
+              [
+                {
+                  "id": 4710383,
+                  "code": "goal",
+                  "type": "Regular goal",
+                  "elapsed": 3453,
+                  "participants": [
+                    {
+                      "id": 365,
+                      "name": "St. Louis Blues",
+                      "gender": "male",
+                      "type": "team",
+                      "country": {
+                        "id": 16,
+                        "name": "USA"
+                      },
+                      "participants": [
+                        {
+                          "id": 309913,
+                          "name": "Jaden Schwartz",
+                          "firstName": "Jaden",
+                          "lastName": "Schwartz",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 23,
+                            "name": "Canada"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "meta": {
+                    "player-name": {
+                      "code": "action:player-name",
+                      "name": "Player Name",
+                      "value": "Jaden Schwartz"
+                    }
+                  },
+                  "updated": "2017-04-15T02:46:20Z"
+                },
+                {
+                  "id": 4710384,
+                  "code": "assist",
+                  "type": "Assist",
+                  "elapsed": 3453,
+                  "participants": [
+                    {
+                      "id": 365,
+                      "name": "St. Louis Blues",
+                      "gender": "male",
+                      "type": "team",
+                      "country": {
+                        "id": 16,
+                        "name": "USA"
+                      },
+                      "participants": [
+                        {
+                          "id": 156557,
+                          "name": "Alex Pietrangelo",
+                          "firstName": "Alex",
+                          "lastName": "Pietrangelo",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 23,
+                            "name": "Canada"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "meta": {
+                    "incident": {
+                      "code": "action:incident",
+                      "name": "Incident",
+                      "value": "4710383"
+                    },
+                    "player-name": {
+                      "code": "action:player-name",
+                      "name": "Player Name",
+                      "value": "Alex Pietrangelo"
+                    }
+                  },
+                  "updated": "2017-04-15T02:46:20Z"
+                },
+                {
+                  "id": 4710385,
+                  "code": "assist",
+                  "type": "Assist 2nd",
+                  "elapsed": 3453,
+                  "participants": [
+                    {
+                      "id": 365,
+                      "name": "St. Louis Blues",
+                      "gender": "male",
+                      "type": "team",
+                      "country": {
+                        "id": 16,
+                        "name": "USA"
+                      },
+                      "participants": [
+                        {
+                          "id": 99288,
+                          "name": "Kyle Brodziak",
+                          "firstName": "Kyle",
+                          "lastName": "Brodziak",
+                          "gender": "male",
+                          "type": "athlete",
+                          "country": {
+                            "id": 23,
+                            "name": "Canada"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "meta": {
+                    "incident": {
+                      "code": "action:incident",
+                      "name": "Incident",
+                      "value": "4710383"
+                    },
+                    "player-name": {
+                      "code": "action:player-name",
+                      "name": "Player Name",
+                      "value": "Kyle Brodziak"
+                    }
+                  },
+                  "updated": "2017-04-15T02:47:23Z"
+                }
+              ]
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event/2486120/actions" document-class="pa:event-actions"></pa:sports-metadata>
+                  <pa:sports-event id="event.2486120">
+                      <team id="team.315">
+                          <team-metadata key="team:315" nationality="USA">
+                              <name>Minnesota Wild</name>
+                          </team-metadata>
+                          <player id="player.312575">
+                              <player-metadata key="player:312575" gender="male" nationality="USA">
+                                  <name>Jason Zucker</name>
+                              </player-metadata>
+                          </player>
+                          <player id="player.426451">
+                              <player-metadata key="player:426451" gender="male" nationality="USA">
+                                  <name>Charlie Coyle</name>
+                              </player-metadata>
+                          </player>
+                      </team>
+                      <team id="team.365">
+                          <team-metadata key="team:365" nationality="USA">
+                              <name>St. Louis Blues</name>
+                          </team-metadata>
+                          <player id="player.99288">
+                              <player-metadata key="player:99288" gender="male" nationality="Canada">
+                                  <name>Kyle Brodziak</name>
+                              </player-metadata>
+                          </player>
+                          <player id="player.156557">
+                              <player-metadata key="player:156557" gender="male" nationality="Canada">
+                                  <name>Alex Pietrangelo</name>
+                              </player-metadata>
+                          </player>
+                          <player id="player.309913">
+                              <player-metadata key="player:309913" gender="male" nationality="Canada">
+                                  <name>Jaden Schwartz</name>
+                              </player-metadata>
+                          </player>
+                      </team>
+                      <actions>
+                          <action id="action.4710383" pa:action-type="Regular goal" pa:formal-name="action:goal" minutes-elapsed="3453" xsi:type="pa:actionComplexType">
+                              <pa:sports-property formal-name="action:player-name" value="Jaden Schwartz"/>
+                              <pa:sports-property formal-name="common:updated" value="2017-04-15T02:46:20Z"/>
+                              <pa:participant idref="player.309913" team-idref="team.365"/>
+                          </action>
+                          <action id="action.4710384" pa:action-type="Assist" pa:formal-name="action:assist" minutes-elapsed="3453" xsi:type="pa:actionComplexType">
+                              <pa:sports-property formal-name="action:incident" value="4710383"/>
+                              <pa:sports-property formal-name="action:player-name" value="Alex Pietrangelo"/>
+                              <pa:sports-property formal-name="common:updated" value="2017-04-15T02:46:20Z"/>
+                              <pa:participant idref="player.156557" team-idref="team.365"/>
+                          </action>
+                          <action id="action.4710385" pa:action-type="Assist 2nd" pa:formal-name="action:assist" minutes-elapsed="3453" xsi:type="pa:actionComplexType">
+                              <pa:sports-property formal-name="action:incident" value="4710383"/>
+                              <pa:sports-property formal-name="action:player-name" value="Kyle Brodziak"/>
+                              <pa:sports-property formal-name="common:updated" value="2017-04-15T02:47:23Z"/>
+                              <pa:participant idref="player.99288" team-idref="team.365"/>
+                          </action>
+                      </actions>
+                  </pa:sports-event>
+              </pa:sports-content>
   '/event/{eventId}/composition':
     get:
       description: Return the event composition.
       tags:
         - Event
+        - Composition
       operationId: getEventComposition
       parameters:
         - $ref: '#/parameters/Accept'
@@ -659,6 +1659,174 @@ paths:
           description: ''
           schema:
             type: object
+          examples:
+            application/json: |-
+              {
+                "game1": {
+                  "code": "scope:game1",
+                  "name": "Game 1",
+                  "entrants": [
+                    {
+                      "id": 8256448,
+                      "number": 1,
+                      "participant": {
+                        "id": 292384,
+                        "name": "Oscar Otte",
+                        "firstName": "Oscar",
+                        "lastName": "Otte",
+                        "gender": "male",
+                        "type": "athlete",
+                        "country": {
+                          "id": 3,
+                          "name": "Germany"
+                        }
+                      },
+                      "meta": {
+                        "game-win": {
+                          "code": "entrant:game-win",
+                          "name": "Game Win",
+                          "value": "hold"
+                        },
+                        "serve": {
+                          "code": "entrant:serve",
+                          "name": "Who Is Serve",
+                          "value": "yes"
+                        }
+                      }
+                    },
+                    {
+                      "id": 8256449,
+                      "number": 2,
+                      "participant": {
+                        "id": 112773,
+                        "name": "Di Wu",
+                        "firstName": "Di",
+                        "lastName": "Wu",
+                        "gender": "male",
+                        "type": "athlete",
+                        "country": {
+                          "id": 125,
+                          "name": "China"
+                        }
+                      },
+                      "meta": {
+                        "game-lost": {
+                          "code": "entrant:game-lost",
+                          "name": "Game Lost",
+                          "value": "15"
+                        }
+                      }
+                    }
+                  ],
+                  "updated": "2017-04-21T03:12:20Z"
+                },
+                "game2": {
+                  "code": "scope:game2",
+                  "name": "Game 2",
+                  "entrants": [
+                    {
+                      "id": 8256448,
+                      "number": 1,
+                      "participant": {
+                        "id": 292384,
+                        "name": "Oscar Otte",
+                        "firstName": "Oscar",
+                        "lastName": "Otte",
+                        "gender": "male",
+                        "type": "athlete",
+                        "country": {
+                          "id": 3,
+                          "name": "Germany"
+                        }
+                      },
+                      "meta": {
+                        "game-win": {
+                          "code": "entrant:game-win",
+                          "name": "Game Win",
+                          "value": "break"
+                        }
+                      }
+                    },
+                    {
+                      "id": 8256449,
+                      "number": 2,
+                      "participant": {
+                        "id": 112773,
+                        "name": "Di Wu",
+                        "firstName": "Di",
+                        "lastName": "Wu",
+                        "gender": "male",
+                        "type": "athlete",
+                        "country": {
+                          "id": 125,
+                          "name": "China"
+                        }
+                      },
+                      "meta": {
+                        "game-lost": {
+                          "code": "entrant:game-lost",
+                          "name": "Game Lost",
+                          "value": "30"
+                        },
+                        "serve": {
+                          "code": "entrant:serve",
+                          "name": "Who Is Serve",
+                          "value": "yes"
+                        }
+                      }
+                    }
+                  ],
+                  "updated": "2017-04-21T03:15:37Z"
+                }
+              }
+            application/xml: |-
+              <?xml version="1.0" encoding="utf-8" ?>
+              <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <pa:sports-metadata doc-id="http://sport-uat.api.press.net/v1/event/2489667/composition" document-class="pa:event-composition"></pa:sports-metadata>
+                  <pa:sports-event id="event.2489667">
+                      <event-metadata>
+                          <sports-property formal-name="common:updated" value="2017-04-21T03:15:37Z"/>
+                          <sports-property formal-name="common:updated:game1" value="2017-04-21T03:12:20Z"/>
+                          <sports-property formal-name="common:updated:game2" value="2017-04-21T03:15:37Z"/>
+                      </event-metadata>
+                      <player>
+                          <player-metadata key="player:112773" gender="male" nationality="China">
+                              <name>Di Wu</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="collection:game">
+                                      <stat stat-type="scope:game1">
+                                          <stat stat-type="entrant:game-lost" value="15"></stat>
+                                      </stat>
+                                      <stat stat-type="scope:game2">
+                                          <stat stat-type="entrant:game-lost" value="30"></stat>
+                                          <stat stat-type="entrant:serve" value="yes"></stat>
+                                      </stat>
+                                  </stat>
+                              </stats>
+                          </player-stats>
+                      </player>
+                      <player>
+                          <player-metadata key="player:292384" gender="male" nationality="Germany">
+                              <name>Oscar Otte</name>
+                          </player-metadata>
+                          <player-stats>
+                              <stats>
+                                  <stat stat-type="collection:game">
+                                      <stat stat-type="scope:game1">
+                                          <stat stat-type="entrant:game-win" value="hold"></stat>
+                                          <stat stat-type="entrant:serve" value="yes"></stat>
+                                      </stat>
+                                      <stat stat-type="scope:game2">
+                                          <stat stat-type="entrant:game-win" value="break"></stat>
+                                      </stat>
+                                  </stat>
+                              </stats>
+                          </player-stats>
+                      </player>
+                  </pa:sports-event>
+              </pa:sports-content>
   '/participant/{participantId}':
     get:
       description: Return the participant's details.
