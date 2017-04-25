@@ -23,6 +23,8 @@ paths:
         Return a collection of available resources. This endpoint is for navigation of the API only.
         Some of the endpoints are not navigable without suppling the required parameters in with the request.
       operationId: getResources
+      security:
+        - apikey: []
       produces:
         - application/json
       responses:
@@ -50,6 +52,8 @@ paths:
       tags:
         - Country
       operationId: listCountries
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/limit'
@@ -113,6 +117,8 @@ paths:
       tags:
         - Country
       operationId: getCountry
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -164,6 +170,8 @@ paths:
       tags:
         - Draw
       operationId: listDraws
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -260,6 +268,8 @@ paths:
       tags:
         - Draw
       operationId: getDraw
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -580,6 +590,8 @@ paths:
       tags:
         - Event
       operationId: listEvents
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -1151,6 +1163,8 @@ paths:
       tags:
         - Event
       operationId: getEvent
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -1435,6 +1449,8 @@ paths:
         - Event
         - Action
       operationId: getEventActions
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -1647,6 +1663,8 @@ paths:
         - Event
         - Composition
       operationId: getEventComposition
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -1831,6 +1849,8 @@ paths:
       tags:
         - Participant
       operationId: listParticipants
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -1945,6 +1965,8 @@ paths:
       tags:
         - Participant
       operationId: getParticipant
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -2031,6 +2053,8 @@ paths:
       tags:
         - Season
       operationId: listSeasons
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -2136,6 +2160,8 @@ paths:
       tags:
         - Season
       operationId: getSeason
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -2195,6 +2221,8 @@ paths:
       tags:
         - Sport
       operationId: listSports
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/limit'
@@ -2271,6 +2299,8 @@ paths:
       tags:
         - Sport
       operationId: getSport
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -2318,6 +2348,8 @@ paths:
       tags:
         - Standing
       operationId: listStandings
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseDate'
@@ -2416,6 +2448,8 @@ paths:
       tags:
         - Standing
       operationId: getStanding
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -2536,6 +2570,8 @@ paths:
       tags:
         - Stage
       operationId: getStages
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseDate'
@@ -2686,6 +2722,8 @@ paths:
       tags:
         - Stage
       operationId: getStage
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -2765,6 +2803,8 @@ paths:
       tags:
         - Tournament
       operationId: listTournament
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -2858,6 +2898,8 @@ paths:
       tags:
         - Tournament
       operationId: getTournament
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
@@ -2910,6 +2952,8 @@ paths:
       tags:
         - Venue
       operationId: listVenues
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseParentId'
@@ -3013,6 +3057,8 @@ paths:
       tags:
         - Venue
       operationId: getVenue
+      security:
+        - apikey: []
       parameters:
         - $ref: '#/parameters/Accept'
         - $ref: '#/parameters/baseEntityId'
