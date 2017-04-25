@@ -3141,12 +3141,13 @@ parameters:
   Accept:
     name: Accept
     in: header
-    required: true
+    required: false
     type: string
     enum:
       - application/json
       - application/xml
     description: The response format.
+    default: application/json
   baseParentId:
     name: baseParentId
     in: query
