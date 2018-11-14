@@ -55,11 +55,37 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/limit'
-          maximum: 100
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 100
+
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.          
       responses:
         "200":
           description: "Country Collection Response"
@@ -117,11 +143,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: countryId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: countryId
           description: The identifier for the country requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -169,16 +205,42 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseParentId'
-          name: stage
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: stage
           required: true
           description: The Stage Id for the draw selection.
           type: integer
-        - $ref: '#/parameters/limit'
-          maximum: 30
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 30
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -269,11 +331,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: drawId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: drawId
           description: The identifier for the draw requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -592,37 +664,108 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseParentId'
-          name: sport
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: sport
           description: The Sport Id for the event selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: country
+          required: false
+          in: query
+          format: int32
+        - name: country
           description: The Country Id for the event selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: tournament
+          required: false
+          in: query
+          format: int32
+        - name: tournament
           description: The Tournament Id for the event selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: season
+          required: false
+          in: query
+          format: int32
+        - name: season
           description: The Season Id for the event selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: stage
+          required: false
+          in: query
+          format: int32
+        - name: stage
           description: The stage Id for the event selection.
           type: integer
-        - $ref: '#/parameters/baseDate'
-          name: start
+          required: false
+          in: query
+          format: int32
+        - name: start
           type: string
-        - $ref: '#/parameters/baseDate'
-          name: end
+          in: query
+          required: false
+          format: 'date-time'
+          x-example: 2014-04-17
+          description: >-
+            Limit the entities to ones within the specified range.
+            The 'end' parameter is typically used in combination with the 'start' param to form a date range.
+
+            Formats Supported:
+              - 'YYYY-MM-DD'
+              - 'YYYY-MM-DD[T]HH:mm:ssZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss'
+              - 'YYYY-MM-DD[T]HH:mm'
+              - 'now'
+              - 'today'
+              - 'tomorrow'
+              - 'now.plus.n'
+              - 'now.minus.n'
+        - name: end
           type: string
-        - $ref: '#/parameters/limit'
-          maximum: 20
+          in: query
+          required: false
+          format: 'date-time'
+          x-example: 2014-04-17
+          description: >-
+            Limit the entities to ones within the specified range.
+            The 'end' parameter is typically used in combination with the 'start' param to form a date range.
+
+            Formats Supported:
+              - 'YYYY-MM-DD'
+              - 'YYYY-MM-DD[T]HH:mm:ssZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss'
+              - 'YYYY-MM-DD[T]HH:mm'
+              - 'now'
+              - 'today'
+              - 'tomorrow'
+              - 'now.plus.n'
+              - 'now.minus.n'
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 20
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -1173,11 +1316,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: eventId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: eventId
           description: The identifier for the event requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -1460,11 +1613,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: eventId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: eventId
           description: The identifier for the event requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -1675,11 +1838,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: eventId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: eventId
           description: The identifier for the event requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -1863,11 +2036,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: eventId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: eventId
           description: The identifier for the event requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -1953,7 +2136,7 @@ paths:
                           </action>
                       </actions>
                   </pa:sports-event>
-              </pa:sports-content>        
+              </pa:sports-content>
   /participant:
     get:
       description: Return a collection of participants.
@@ -1963,17 +2146,46 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseParentId'
-          name: sport
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: sport
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: country
+          required: false
+          in: query
+          format: int32
+        - name: country
           type: integer
-        - $ref: '#/parameters/limit'
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
           maximum: 100
+        - name: offset
+          in: query
+          required: false
+          default: 0
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         "200":
           description: "Participant Collection Response"
@@ -2082,11 +2294,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: participantId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: participantId
           description: The identifier for the participant requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -2171,15 +2393,42 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseParentId'
-          name: tournament
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: tournament
           description: The Tournament Id for the event selection.
           type: integer
-        - $ref: '#/parameters/limit'
-          maximum: 30
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 30
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -2280,11 +2529,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: seasonId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: seasonId
           description: The identifier for the season requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -2342,11 +2601,36 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/limit'
-          maximum: 30
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 30
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -2421,11 +2705,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: sportId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: sportId
           description: The identifier for the sport requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -2471,41 +2765,114 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseDate'
-          name: start
+        - name: Accept
+          in: header
+          required: false
           type: string
-        - $ref: '#/parameters/baseDate'
-          name: end
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: start
           type: string
-        - $ref: '#/parameters/baseParentId'
-          name: sport
+          in: query
+          required: false
+          format: 'date-time'
+          x-example: 2014-04-17
+          description: >-
+            Limit the entities to ones within the specified range.
+            The 'end' parameter is typically used in combination with the 'start' param to form a date range.
+
+            Formats Supported:
+              - 'YYYY-MM-DD'
+              - 'YYYY-MM-DD[T]HH:mm:ssZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss'
+              - 'YYYY-MM-DD[T]HH:mm'
+              - 'now'
+              - 'today'
+              - 'tomorrow'
+              - 'now.plus.n'
+              - 'now.minus.n'
+        - name: end
+          type: string
+          in: query
+          required: false
+          format: 'date-time'
+          x-example: 2014-04-17
+          description: >-
+            Limit the entities to ones within the specified range.
+            The 'end' parameter is typically used in combination with the 'start' param to form a date range.
+
+            Formats Supported:
+              - 'YYYY-MM-DD'
+              - 'YYYY-MM-DD[T]HH:mm:ssZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss'
+              - 'YYYY-MM-DD[T]HH:mm'
+              - 'now'
+              - 'today'
+              - 'tomorrow'
+              - 'now.plus.n'
+              - 'now.minus.n'
+        - name: sport
           type: integer
           description: The Sport Id for the standings selection.
-        - $ref: '#/parameters/baseParentId'
-          name: tournament
+          required: false
+          in: query
+          format: int32
+        - name: tournament
           description: The Tournament Id for the standings selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: season
+          required: false
+          in: query
+          format: int32
+        - name: season
           description: The Season Id for the standings selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: stage
+          required: false
+          in: query
+          format: int32
+        - name: stage
           description: The Stage Id for the standings selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: event
+          required: false
+          in: query
+          format: int32
+        - name: event
           description: The Event Id for the standings selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: participant
+          required: false
+          in: query
+          format: int32
+        - name: participant
           description: The Participant Id for the standings selection.
           type: integer
-        - $ref: '#/parameters/limit'
-          maximum: 20
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 20
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -2580,11 +2947,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: standingId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: standingId
           description: The identifier for the standing requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -2703,25 +3080,90 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseDate'
-          name: start
+        - name: Accept
+          in: header
+          required: false
           type: string
-        - $ref: '#/parameters/baseDate'
-          name: end
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: start
           type: string
-        - $ref: '#/parameters/baseParentId'
-          name: sport
+          in: query
+          required: false
+          format: 'date-time'
+          x-example: 2014-04-17
+          description: >-
+            Limit the entities to ones within the specified range.
+            The 'end' parameter is typically used in combination with the 'start' param to form a date range.
+
+            Formats Supported:
+              - 'YYYY-MM-DD'
+              - 'YYYY-MM-DD[T]HH:mm:ssZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss'
+              - 'YYYY-MM-DD[T]HH:mm'
+              - 'now'
+              - 'today'
+              - 'tomorrow'
+              - 'now.plus.n'
+              - 'now.minus.n'
+        - name: end
+          type: string
+          in: query
+          required: false
+          format: 'date-time'
+          x-example: 2014-04-17
+          description: >-
+            Limit the entities to ones within the specified range.
+            The 'end' parameter is typically used in combination with the 'start' param to form a date range.
+
+            Formats Supported:
+              - 'YYYY-MM-DD'
+              - 'YYYY-MM-DD[T]HH:mm:ssZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+              - 'YYYY-MM-DD[T]HH:mm:ss'
+              - 'YYYY-MM-DD[T]HH:mm'
+              - 'now'
+              - 'today'
+              - 'tomorrow'
+              - 'now.plus.n'
+              - 'now.minus.n'
+        - name: sport
           description: The Sport Id for the stage selection.
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: season
+          required: false
+          in: query
+          format: int32
+        - name: season
           description: The Season Id for the stage selection.
           type: integer
-        - $ref: '#/parameters/limit'
-          maximum: 50
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 50
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -2860,11 +3302,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: stageId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: stageId
           description: The identifier for the stage requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -2942,15 +3394,42 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseParentId'
-          name: sport
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: sport
           description: The Sport Id for the tournament selection.
           type: integer
-        - $ref: '#/parameters/limit'
-          maximum: 50
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 50
+        - name: offset
+          in: query
+          required: false
+          default: 0
+          type: integer
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -3039,11 +3518,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: tournamentId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: tournamentId
           description: The identifier for the tournament requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -3094,17 +3583,46 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseParentId'
-          name: sport
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: sport
           type: integer
-        - $ref: '#/parameters/baseParentId'
-          name: country
+          required: false
+          in: query
+          format: int32
+        - name: country
           type: integer
-        - $ref: '#/parameters/limit'
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
           maximum: 100
+        - name: offset
+          in: query
+          required: false
+          default: 0
           type: integer
-        - $ref: '#/parameters/offset'
+          format: int32
+          x-example: 50
+          description: >-
+            The offset of the first item to be returned.
+            The 'offset' parameter is typically used with the 'limit' parameter to facilitate pagination.        
       responses:
         '200':
           description: ''
@@ -3202,11 +3720,21 @@ paths:
       security:
         - apikey: []
       parameters:
-        - $ref: '#/parameters/Accept'
-        - $ref: '#/parameters/baseEntityId'
-          name: venueId
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+            - application/xml
+          description: The response format.
+          default: application/json
+        - name: venueId
           description: The identifier for the venue requested.
           type: integer
+          in: path
+          required: true
+          format: int32
       responses:
         '200':
           description: ''
@@ -3281,65 +3809,8 @@ paths:
               </pa:sports-content>
 
 parameters:
-  Accept:
-    name: Accept
-    in: header
-    required: false
-    type: string
-    enum:
-      - application/json
-      - application/xml
-    description: The response format.
-    default: application/json
-  baseParentId:
-    name: baseParentId
-    in: query
-    required: false
-    type: integer
-    format: int32
-    description: The identifier of the parent entity whose children are requested.
-    x-example: 415
-  baseDate:
-    name: baseDate
-    in: query
-    required: false
-    type: string
-    format: 'date-time'
-    x-example: 2014-04-17
-    description: >-
-      Limit the entities to ones within the specified range.
-      The 'end' parameter is typically used in combination with the 'start' param to form a date range.
 
-      Formats Supported:
-        - 'YYYY-MM-DD'
-        - 'YYYY-MM-DD[T]HH:mm:ssZ'
-        - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
-        - 'YYYY-MM-DD[T]HH:mm:ss'
-        - 'YYYY-MM-DD[T]HH:mm'
-        - 'now'
-        - 'today'
-        - 'tomorrow'
-        - 'now.plus.n'
-        - 'now.minus.n'
-  baseEntityId:
-    name: baseEntityId
-    in: path
-    required: true
-    type: integer
-    format: int32
-    description: The identifier for the entity requested.
-    x-example: 4713
-  limit:
-    name: limit
-    in: query
-    required: false
-    type: integer
-    format: int32
-    default: 20
-    x-example: 5
-    description: >-
-      Limit the the number of items to be returned per page.
-      The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+
   offset:
     name: offset
     in: query
