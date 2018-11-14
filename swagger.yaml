@@ -66,32 +66,28 @@ paths:
             type: "array"
           examples:
             application/json: |-
-              {
-                "offset": 0,
-                "limit": 20,
-                "hasNext": true,
-                "hasPrevious": false,
-                "items": [
-                  {
-                    "id": 4,
-                    "name": "England",
-                    "updated": "2017-01-01T00:00:00Z"
-                    "meta": {
-                      "iso-code": {
-                        "code": "country:iso-code",
-                        "name": "Iso Code",
-                        "value": "GBR"
-                      }
-                    },
-                    "links": [
-                      {
-                        "rel": "self",
-                        "href": "http://sport.api.press.net/v1/country/2"
-                      }
-                    ]
-                  }
-                ]
-              }
+             {
+             	"offset": 0,
+             	"limit": 20,
+             	"hasNext": true,
+             	"hasPrevious": false,
+             	"items": [{
+             		"id": 4,
+             		"name": "England",
+             		"updated": "2017-01-01T00:00:00Z",
+             		"meta": {
+             			"iso-code": {
+             				"code": "country:iso-code",
+             				"name": "Iso Code",
+             				"value": "GBR"
+             			}
+             		},
+             		"links": [{
+             			"rel": "self",
+             			"href": "http://sport.api.press.net/v1/country/2"
+             		}]
+             	}]
+             }
             application/xml: |-
               <pa:sports-content xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:pa="http://sport-api.pa.press.net/2016-09-30/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <pa:sports-metadata doc-id="http://sport.api.press.net/v1/country" document-class="pa:country-collection">
@@ -132,22 +128,20 @@ paths:
           examples:
             application/json: |-
               {
-                "id": 2,
-                "name": "England",
-                "updated": "2015-10-20T14:15:46Z",
-                "meta": {
-                  "iso-code": {
-                    "code": "country:iso-code",
-                    "name": "Iso Code",
-                    "value": "GBR"
-                  }
-                },
-                "links": [
-                  {
-                    "rel": "self",
-                    "href": "http://sport.api.press.net/v1/country/2"
-                  }
-                ]
+              	"id": 2,
+              	"name": "England",
+              	"updated": "2015-10-20T14:15:46Z",
+              	"meta": {
+              		"iso-code": {
+              			"code": "country:iso-code",
+              			"name": "Iso Code",
+              			"value": "GBR"
+              		}
+              	},
+              	"links": [{
+              		"rel": "self",
+              		"href": "http://sport.api.press.net/v1/country/2"
+              	}]
               }
             application/xml: |-
               <?xml version="1.0" encoding="utf-8" ?>
