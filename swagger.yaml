@@ -90,7 +90,7 @@ paths:
         "200":
           description: "Country Collection Response"
           schema:
-            type: "array"
+            type: "object"
           examples:
             application/json: |-
              {
@@ -1633,6 +1633,8 @@ paths:
           description: ''
           schema:
             type: array
+            items:
+              type: object
           examples:
             application/json: |-
               [
