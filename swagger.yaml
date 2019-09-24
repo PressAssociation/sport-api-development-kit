@@ -91,8 +91,6 @@ paths:
             Limit the the number of items to be returned per page.
             The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
           maximum: 100
-
-      
       responses:
         "200":
           description: "Audit Collection Response"
