@@ -48,7 +48,13 @@ paths:
               }
   /audit:
     get:
-      description: Return a collection of updated resources.
+      description: |-
+        Return a collection of updated resources. 
+        
+        When the 'hasNext' property is set to true, the user should pass the last item's timestamp in the as the timestampAfter to return the next page of data.
+        
+        Please note that when the timestampAfter is passed this is a >= query and therefore will return back the pervious item selected.
+    
       tags:
         - Audit
       operationId: listAudits
