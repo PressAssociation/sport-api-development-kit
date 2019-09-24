@@ -46,6 +46,211 @@ paths:
                   }
                 ]
               }
+  /audit:
+    get:
+      description: Return a collection of updated resources.
+      tags:
+        - Country
+      operationId: listAudits
+      security:
+        - apikey: []
+      parameters:
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum:
+            - application/json
+          description: The response format.
+          default: application/json
+        - name: timestampAfter
+          type: string
+          in: query
+          required: true
+          format: 'date-time'
+          x-example: 2019-01-01T09:00:00.000Z
+          description: >-
+            Limit the entities to ones updated after the specified range.
+          
+            Formats Supported:
+              - 'YYYY-MM-DD[T]HH:mm:ss.SSSZ'
+        - name: sport
+          description: The Sport Id for the event selection.
+          type: integer
+          required: false
+          in: query
+          format: int32
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          format: int32
+          default: 20
+          x-example: 5
+          description: >-
+            Limit the the number of items to be returned per page.
+            The 'limit' parameter is typically used with the 'offset' parameter to facilitate pagination.
+          maximum: 100
+
+      
+      responses:
+        "200":
+          description: "Audit Collection Response"
+          schema:
+            type: "object"
+          examples:
+            application/json: |-
+              {
+                  "offset": 0,
+                  "limit": 5,
+                  "hasNext": true,
+                  "hasPrevious": false,
+                  "items": [
+                      {
+                          "operation": "update",
+                          "timestamp": "2019-09-24T11:45:50.025Z",
+                          "type": "stage",
+                          "url": "http://sport.api.press.net/v1/stage/858210?ts=1569325550025",
+                          "_ts": 1569325550025,
+                          "stage": {
+                              "id": 858210,
+                              "name": "European Masters"
+                          },
+                          "season": {
+                              "id": 13327,
+                              "name": "2019"
+                          },
+                          "tournament": {
+                              "id": 429,
+                              "name": "European Tour"
+                          },
+                          "sport": {
+                              "id": 3,
+                              "name": "Golf"
+                          },
+                          "country": {
+                              "id": 37,
+                              "name": "Switzerland"
+                          }
+                      },
+                      {
+                          "operation": "update",
+                          "timestamp": "2019-09-24T12:11:44.441Z",
+                          "type": "event:composition",
+                          "url": "http://sport.api.press.net/v1/event/2915709/composition?ts=1569327104441",
+                          "_ts": 1569327104441,
+                          "event": {
+                              "id": 2915709,
+                              "name": "European Masters"
+                          },
+                          "stage": {
+                              "id": 858210,
+                              "name": "European Masters"
+                          },
+                          "season": {
+                              "id": 13327,
+                              "name": "2019"
+                          },
+                          "tournament": {
+                              "id": 429,
+                              "name": "European Tour"
+                          },
+                          "sport": {
+                              "id": 3,
+                              "name": "Golf"
+                          },
+                          "country": {
+                              "id": 37,
+                              "name": "Switzerland"
+                          }
+                      },
+                      {
+                          "operation": "update",
+                          "timestamp": "2019-09-24T12:11:47.539Z",
+                          "type": "event",
+                          "url": "http://sport-uat.api.press.net/v1/event/2915709?ts=1569327107539",
+                          "_ts": 1569327107539,
+                          "event": {
+                              "id": 2915709,
+                              "name": "European Masters"
+                          },
+                          "stage": {
+                              "id": 858210,
+                              "name": "European Masters"
+                          },
+                          "season": {
+                              "id": 13327,
+                              "name": "2019"
+                          },
+                          "tournament": {
+                              "id": 429,
+                              "name": "European Tour"
+                          },
+                          "sport": {
+                              "id": 3,
+                              "name": "Golf"
+                          },
+                          "country": {
+                              "id": 37,
+                              "name": "Switzerland"
+                          }
+                      },
+                      {
+                          "operation": "update",
+                          "timestamp": "2019-09-24T12:23:42.930Z",
+                          "type": "stage",
+                          "url": "http://sport-uat.api.press.net/v1/stage/858498?ts=1569327822930",
+                          "_ts": 1569327822930,
+                          "stage": {
+                              "id": 858498,
+                              "name": "Shaw Charity Classic"
+                          },
+                          "season": {
+                              "id": 13355,
+                              "name": "2019"
+                          },
+                          "tournament": {
+                              "id": 9418,
+                              "name": "Champions Tour"
+                          },
+                          "sport": {
+                              "id": 3,
+                              "name": "Golf"
+                          },
+                          "country": {
+                              "id": 23,
+                              "name": "Canada"
+                          }
+                      },
+                      {
+                          "operation": "update",
+                          "timestamp": "2019-09-24T12:44:20.557Z",
+                          "type": "stage",
+                          "url": "http://sport-uat.api.press.net/v1/stage/859202?ts=1569329060557",
+                          "_ts": 1569329060557,
+                          "stage": {
+                              "id": 859202,
+                              "name": "Portland Classic"
+                          },
+                          "season": {
+                              "id": 13456,
+                              "name": "2019"
+                          },
+                          "tournament": {
+                              "id": 436,
+                              "name": "LPGA Tour"
+                          },
+                          "sport": {
+                              "id": 3,
+                              "name": "Golf"
+                          },
+                          "country": {
+                              "id": 16,
+                              "name": "USA"
+                          }
+                      }
+                  ]
+              }
   /country:
     get:
       description: Return a collection of countries.
@@ -90,7 +295,7 @@ paths:
         "200":
           description: "Country Collection Response"
           schema:
-            type: "array"
+            type: "object"
           examples:
             application/json: |-
              {
@@ -1633,6 +1838,8 @@ paths:
           description: ''
           schema:
             type: array
+            items:
+              type: "object"
           examples:
             application/json: |-
               [
