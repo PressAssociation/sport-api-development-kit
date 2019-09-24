@@ -50,7 +50,7 @@ paths:
     get:
       description: Return a collection of updated resources.
       tags:
-        - Country
+        - Audit
       operationId: listAudits
       security:
         - apikey: []
