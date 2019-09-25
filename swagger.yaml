@@ -203,7 +203,7 @@ paths:
                           "operation": "update",
                           "timestamp": "2019-09-24T12:23:42.930Z",
                           "type": "stage",
-                          "url": "http://sport-uat.api.press.net/v1/stage/858498?ts=1569327822930",
+                          "url": "http://sport.api.press.net/v1/stage/858498?ts=1569327822930",
                           "_ts": 1569327822930,
                           "stage": {
                               "id": 858498,
